@@ -13,7 +13,7 @@ nav ul {
 
 nav li {
     list-style-type: none;
-    color: #f5deb3;
+    color: #ffffff;
     display: inline;
     float: left;
     font-size: 25px;
@@ -22,10 +22,13 @@ nav li {
 nav a {
     display: block;
     text-align: center;
-    padding: 14px 16px;
     text-decoration: none;
+    padding: 25px 20px;
 }
 
-nav li a:hover {
-    background-color: #0e0107;
+nav img {
+    height: 70px;
+    width: 70px;
+    object-fit: cover;
+    padding: 3px 10px;
 }
