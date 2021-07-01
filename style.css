@@ -1,0 +1,12 @@
+body {
+    margin: 0px;
+    background-color: #4B0082;
+}
+
+#main {
+    height: auto;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    color: orange;
+  }
