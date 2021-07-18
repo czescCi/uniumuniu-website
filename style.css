@@ -6,7 +6,7 @@ body {
     display: flex;
     flex-direction: column;
     margin: 0;
-    background-color: #012d24;
+    background-color: #131b26;
     font-family: 'Roboto Mono', monospace;
 }
 
@@ -15,8 +15,8 @@ nav {
 }
 
 #logo {
-    height: 100px;
-    width: 100px;
+    height: 80px;
+    width: 80px;
 }
 
 main {
@@ -30,6 +30,9 @@ main {
 
 .nav-div {
     flex: 1;
+    position: relative;
+    border-style: solid;
+    border-color: #dd2f08;
 }
 
 @media screen and (max-width: 800px) {
@@ -38,18 +41,26 @@ main {
     }
 }
 
+.nav-para {
+    position: absolute;
+    bottom: 0;
+    font-size: 50px;
+    color: #dd2f08;
+    margin-bottom: 0;
+}
+
 #about {
-    background-color: darkslateblue;
+    border-width: 2px 2px;
 }
 
 #projects {
-    background-color: darkslategray;
+    border-width: 2px 2px 2px 0;
 }
 
 #contact {
-    background-color: dodgerblue;
+    border-width: 2px 2px 2px 0;  
 }
-
+/* 
 footer {
     display: flex;
     flex-direction: row-reverse;
@@ -58,4 +69,4 @@ footer {
 #maker {
     color: #f5deb3;
     font-size: 10px;
-}
+} */
