@@ -14,9 +14,16 @@ nav {
     display: flex;
 }
 
+/* .img-div {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
 #logo {
-    height: 80px;
-    width: 80px;
+    height: 300px;
+    width: 300px;
 }
 
 main {
@@ -32,12 +39,17 @@ main {
     flex: 1;
     position: relative;
     border-style: solid;
-    border-color: #dd2f08;
+    border-color: #f8a23a;
 }
 
 @media screen and (max-width: 800px) {
     main {
         flex-direction: column;
+    }
+
+    #logo {
+        height: 150px;
+        width: 150px;
     }
 }
 
@@ -45,20 +57,28 @@ main {
     position: absolute;
     bottom: 0;
     font-size: 50px;
-    color: #dd2f08;
-    margin-bottom: 0;
+    color: #f8a23a;
 }
 
 #about {
-    border-width: 2px 2px;
+    border-width: 0 1px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #projects {
-    border-width: 2px 2px 2px 0;
+    border-width: 0 1px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #contact {
-    border-width: 2px 2px 2px 0;  
+    border-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 /* 
 footer {
