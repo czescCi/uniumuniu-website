@@ -1,8 +1,9 @@
-html, body {
+html {
     height: 100%;
 }
 
 body {
+    height: 100%;
     display: flex;
     flex-direction: column;
     margin: 0;
@@ -42,17 +43,6 @@ main {
     border-color: #f8a23a;
 }
 
-@media screen and (max-width: 800px) {
-    main {
-        flex-direction: column;
-    }
-
-    #logo {
-        height: 150px;
-        width: 150px;
-    }
-}
-
 .nav-para {
     position: absolute;
     bottom: 0;
@@ -61,6 +51,7 @@ main {
 }
 
 #about {
+    background-color: darkmagenta;
     border-width: 0 1px 0 0;
     display: flex;
     align-items: center;
@@ -68,6 +59,7 @@ main {
 }
 
 #projects {
+    background-color: forestgreen;
     border-width: 0 1px 0 0;
     display: flex;
     align-items: center;
@@ -75,6 +67,7 @@ main {
 }
 
 #contact {
+    background-color: blue;
     border-width: 0;
     display: flex;
     align-items: center;
@@ -90,3 +83,24 @@ footer {
     color: #f5deb3;
     font-size: 10px;
 } */
+
+@media screen and (max-width: 800px) {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    #logo {
+        height: 150px;
+        width: 150px;
+    }
+
+    .nav-div {
+        flex: none;
+        border-style: none;
+        height: 100vh;
+    }
+
+    .nav-para {
+        display: none;
+    }
+}
