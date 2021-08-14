@@ -11,10 +11,6 @@ body {
     font-family: 'Roboto Mono', monospace;
 }
 
-nav {
-    display: flex;
-}
-
 /* .img-div {
     height: 100%;
     display: flex;
@@ -73,6 +69,11 @@ main {
     align-items: center;
     justify-content: center;
 }
+
+.nav {
+    display: none;
+}
+
 /* 
 footer {
     display: flex;
@@ -83,24 +84,3 @@ footer {
     color: #f5deb3;
     font-size: 10px;
 } */
-
-@media screen and (max-width: 800px) {
-    html {
-        scroll-behavior: smooth;
-    }
-
-    #logo {
-        height: 150px;
-        width: 150px;
-    }
-
-    .nav-div {
-        flex: none;
-        border-style: none;
-        height: 100vh;
-    }
-
-    .nav-para {
-        display: none;
-    }
-}

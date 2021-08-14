@@ -7,28 +7,18 @@
         <title>uniumuniu</title>
         <meta name="description" content="uniumuniu the best App Developer on the market">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="mobilestyle.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet"> 
     </head>
     <body>
-        <header></header>
 
-        <main>
-            <div id="about" class="nav-div" data-label="About">
-                <!-- <div id="img-div"> -->
-                    <img id="logo" src="res/logo.png"></img>
-                <!-- </div> -->
-                <p class="nav-para">about</p>
-            </div>
-            <div id="projects" class="nav-div" data-label="Projects">
-                <p class="nav-para">projects</p>
-            </div>
-            <div id="contact" class="nav-div" data-label="Contact">
-                <p class="nav-para">contact</p>
-            </div>
-            <nav class="nav">
+        <div class="section" id="about" data-label="About">About</div>
+        <div class="section" id="projects" data-label="Projects">Projects</div>
+        <div class="section" id="contact" data-label="Contact">Contact</div>
+        
+        <nav class="nav">
                 <div class="nav-item">
                     <a href="#about" class="nav-link">Bottle</a>
                     <span class="nav-label">About</span>
@@ -40,19 +30,13 @@
                 </div>
 
                 <div class="nav-item">
-                    <a href="#about" class="nav-link">Bottle</a>
+                    <a href="#contact" class="nav-link">Bottle</a>
                     <span class="nav-label">Contact</span>
                 </div>
 
-            </nav>
-        </main>
+        </nav>
     
-
-        <!-- <footer>
-            <div class="footer-child">
-                <p id="maker">made by J.</p>
-            </div>
-        </footer> -->
+    
         
         <script src="script.js" async defer></script>
     </body>
