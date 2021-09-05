@@ -7,7 +7,7 @@ html {
     margin: 0;
   }
   
-  .nav-div {
+  .section {
     height: 100vh;
   }
   
@@ -21,4 +21,45 @@ html {
   
   #contact {
     background: #fff5ba;
+  }
+
+  .nav {
+    --nav-gap: 15px;
+    padding: var(--nav-gap);
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .nav-item {
+    align-items: center;
+    display: flex;
+    margin-bottom: var(--nav-gap);
+    flex-direction: row-reverse;
+  }
+
+  .nav-link:hover ~ .nav-label {
+    opacity: 1;
+  }
+
+  .nav-label {
+    color: #000000;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.1s;
+  }
+
+  .nav-link {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    height: var(--nav-gap);
+    width: var(--nav-gap);
+    margin-left: var(--nav-gap);
+    transition: transform 0.1s;
+  }
+
+  .nav-link-selected {
+    background-color: #000000;
+    transform: scale(1.4);
   }
