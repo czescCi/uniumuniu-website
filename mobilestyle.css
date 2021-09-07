@@ -12,16 +12,37 @@ html {
   }
   
   #about {
-    background: #aff8db;
+    background-color: #131b26;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #logo {
+    height: 300px;
+    width: 300px;
   }
   
   #projects {
-    background: #ffabab;
+    background-color: #131b26;
+  }
+
+  #contact {
+    background-color: #131b26;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .textarea {
+    background-color: #dddddd;
+    color: #666666;
+    padding: 1em;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    outline: none;
   }
   
-  #contact {
-    background: #fff5ba;
-  }
 
   .nav {
     --nav-gap: 15px;
@@ -44,14 +65,14 @@ html {
   }
 
   .nav-label {
-    color: #000000;
+    color: #f8a23a;
     font-weight: bold;
     opacity: 0;
     transition: opacity 0.1s;
   }
 
   .nav-link {
-    background: rgba(0, 0, 0, 0.3);
+    background: rgb(248, 162, 58, 0.2);
     border-radius: 50%;
     height: var(--nav-gap);
     width: var(--nav-gap);
@@ -60,6 +81,6 @@ html {
   }
 
   .nav-link-selected {
-    background-color: #000000;
+    background-color: #f8a23a;
     transform: scale(1.4);
   }
