@@ -1,5 +1,7 @@
-html {
+  html {
+    overflow-y: scroll;
     scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
   }
   
   body {
@@ -9,13 +11,23 @@ html {
   
   .section {
     height: 100vh;
+    scroll-snap-align: center;
   }
   
+  @keyframes about-bgd {
+    from {background-color: #131b26;}
+    to {background-color: #012d24;}
+  }
+
   #about {
     background-color: #131b26;
     display: flex;
     justify-content: center;
     align-items: center;
+    animation-name: about-bgd;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
   }
 
   #logo {
