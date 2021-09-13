@@ -62,10 +62,10 @@ const logo = document.getElementById('logo');
 logo.onclick = function() {
   let splitedFullFileName = this.src.split('/');
   let fileName = splitedFullFileName[splitedFullFileName.length - 1];
-  if (fileName === "logo_orange.png") {
-    this.src = "logo.png";
+  if (fileName === "logo.png") {
+    logo.src = "res/logo_orange.png";
   } else {
-    this.src = "logo_orange.png";
+    logo.src = "res/logo.png";
   }
 }
 

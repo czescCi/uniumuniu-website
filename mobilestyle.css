@@ -45,7 +45,7 @@
   .image-grid {
     --gap: 16px;
     --num-cols: 4;
-    --row-height: 300px;
+    --row-height: 200px;
 
     box-sizing: border-box;
     padding: var(--gap);
@@ -71,10 +71,17 @@
     grid-row: span 2;
   }
 
-  @madia screen and (max-width: 1024px) {
+  @media screen and (max-width: 1024px) {
     .image-grid {
       --num-cols: 2;
-      --row-height: 200px;
+      --row-height: 100px;
+    }
+  }
+
+  @media screen and (max-height: 768px) {
+    .image-grid {
+      --num-cols: 4;
+      --row-height: 150px;
     }
   }
 
@@ -83,6 +90,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
   }
 
   .textarea {
@@ -98,6 +106,12 @@
     width: 300px;
     height: 200px;
     transition: all 0.2s;
+  }
+
+  @media screen and (max-width: 1024px) {
+    .textarea {
+      width: 250px;
+    }
   }
 
   .textarea:hover {
@@ -152,4 +166,9 @@
   .nav-link-selected {
     background-color: #f8a23a;
     transform: scale(1.4);
+  }
+
+  ion-icon {
+    color: white;
+    font-size: 20px;
   }
