@@ -42,19 +42,6 @@ function activateNavigation() {
   activateNavigation();
   
 
-// function edit() {
-//   var inputs = document.myForm;
-//   for(var i = 0; i <inputs.length; i++) {
-//     inputs[i].disabled = false;
-//   }
-// }
-
-// var logo_color = document.getElementById("logo");
-//     logo_color.onclick = function() {
-//       this.src = "res/logo_orange.png"
-//     }
-
-
 // MY SOLUTION
 
 const logo = document.getElementById('logo');
