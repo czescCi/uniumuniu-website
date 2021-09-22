@@ -39,6 +39,10 @@ main {
     border-color: #f8a23a;
 }
 
+/* .nav-div:hover {
+    background-color: #f8a23a;
+} */
+
 .nav-para {
     position: absolute;
     bottom: 0;
@@ -47,7 +51,7 @@ main {
 }
 
 #about {
-    background-color: darkmagenta;
+    /* background-color: darkmagenta; */
     border-width: 0 1px 0 0;
     display: flex;
     align-items: center;
@@ -55,7 +59,7 @@ main {
 }
 
 #projects {
-    background-color: forestgreen;
+    /* background-color: forestgreen; */
     border-width: 0 1px 0 0;
     display: flex;
     align-items: center;
@@ -63,7 +67,7 @@ main {
 }
 
 #contact {
-    background-color: blue;
+    /* background-color: blue; */
     border-width: 0;
     display: flex;
     align-items: center;
