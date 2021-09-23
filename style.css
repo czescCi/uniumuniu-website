@@ -33,7 +33,7 @@ main {
 }
 
 .nav-div {
-    flex: 1;
+    flex: 1 0;
     position: relative;
     border-style: solid;
     border-color: #f8a23a;

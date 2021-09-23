@@ -110,7 +110,7 @@
     width: 300px;
     height: 200px;
     transition: all 0.2s;
-    resize: vertical;
+    /* resize: vertical; */
   }
 
   #btn-container {
