@@ -50,8 +50,12 @@ projectsDiv.onclick = function() {
   projectsDiv.style.flexGrow = "6";
   // aboutDiv.style.justifyContent = "flex-start";
   aboutDiv.style.alignItems = "stretch";
-  aboutPara.style.visibility = "hidden";
-  contactPara.style.visibility = "hidden";
+  aboutPara.style.fontSize = "20px";
+  contactPara.style.fontSize = "20px";
+  // aboutPara.style.display = "inline-block";
+  // aboutPara.style.verticalAlign = "middle";
+  aboutPara.style.writingMode = "vertical-rl";
+  contactPara.style.writingMode = "vertical-rl";
   logo.style.width = "100px";
   logo.style.height = "100px";
 }
