@@ -1,3 +1,7 @@
+if (screen.width <= 800) {
+  document.location = "mobilepage.html";
+}
+
 let navItems = document.querySelectorAll(".nav-div");
 let navPara = document.querySelectorAll(".nav-para");
 let aboutDiv = document.getElementById("about");
@@ -12,7 +16,6 @@ let fontSizeNormalDiv = "50px";
 let logoSmallSize = "100px";
 let logoNormalSize = "300px";
 let marginBottom = "30px";
-
 
 // let mouseOverBgdColor = function() {
 //     navItems.style.backgroundColor = "#f8a23a";
