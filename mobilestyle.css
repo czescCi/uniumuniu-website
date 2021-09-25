@@ -4,12 +4,11 @@
     scroll-behavior: smooth;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
-    /* overflow-y: scroll; */
   }
   
   .section {
     height: 100vh;
-    /* scroll-snap-align: center; */
+    scroll-snap-align: center;
   }
   
   @keyframes about-bgd {

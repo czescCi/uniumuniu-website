@@ -7,6 +7,12 @@ let aboutPara = document.getElementById("about-para");
 let projectsPara = document.getElementById("projects-para");
 let contactPara = document.getElementById("contact-para");
 let logo = document.getElementById("logo");
+let fontSizeSmallDiv = "30px";
+let fontSizeNormalDiv = "50px";
+let logoSmallSize = "100px";
+let logoNormalSize = "300px";
+let marginBottom = "30px";
+
 
 // let mouseOverBgdColor = function() {
 //     navItems.style.backgroundColor = "#f8a23a";
@@ -41,31 +47,52 @@ for (let i = 0; i < navItems.length; i++) {
 }
 
 aboutDiv.onclick = function() {
+  resetDivs();
   aboutDiv.style.flexGrow = "6";
-  projectsPara.style.visibility = "hidden";
-  contactPara.style.visibility = "hidden";
+  projectsPara.style.fontSize = fontSizeSmallDiv;
+  contactPara.style.fontSize = fontSizeSmallDiv;
+  projectsPara.style.writingMode = "vertical-rl";
+  contactPara.style.writingMode = "vertical-rl";
+  projectsPara.style.marginBottom = marginBottom;
+  contactPara.style.marginBottom = marginBottom;
 }
 
 projectsDiv.onclick = function() {
+  resetDivs();
   projectsDiv.style.flexGrow = "6";
-  // aboutDiv.style.justifyContent = "flex-start";
   aboutDiv.style.alignItems = "stretch";
-  aboutPara.style.fontSize = "20px";
-  contactPara.style.fontSize = "20px";
-  // aboutPara.style.display = "inline-block";
-  // aboutPara.style.verticalAlign = "middle";
+  aboutPara.style.fontSize = fontSizeSmallDiv;
+  contactPara.style.fontSize = fontSizeSmallDiv;
   aboutPara.style.writingMode = "vertical-rl";
   contactPara.style.writingMode = "vertical-rl";
-  logo.style.width = "100px";
-  logo.style.height = "100px";
+  aboutPara.style.marginBottom = marginBottom;
+  contactPara.style.marginBottom = marginBottom;
+  logo.style.width = logoSmallSize;
+  logo.style.height = logoSmallSize;
 }
 
 contactDiv.onclick = function() {
+  resetDivs();
   contactDiv.style.flexGrow = "6";
-  // aboutDiv.style.justifyContent = "flex-start";
   aboutDiv.style.alignItems = "stretch";
-  aboutPara.style.visibility = "hidden";
-  projectsPara.style.visibility = "hidden";
-  logo.style.width = "100px";
-  logo.style.height = "100px";
+  aboutPara.style.fontSize = fontSizeSmallDiv;
+  projectsPara.style.fontSize = fontSizeSmallDiv;
+  aboutPara.style.writingMode = "vertical-rl";
+  projectsPara.style.writingMode = "vertical-rl";
+  aboutPara.style.marginBottom = marginBottom;
+  projectsPara.style.marginBottom = marginBottom;
+  logo.style.width = logoSmallSize;
+  logo.style.height = logoSmallSize;
+}
+
+function resetDivs() {
+  aboutDiv.style.flexGrow = projectsDiv.style.flexGrow = contactDiv.style.flexGrow = 1;
+  logo.style.width = logoNormalSize;
+  logo.style.height = logoNormalSize;
+  aboutPara.style.fontSize = projectsPara.style.fontSize = contactPara.style.fontSize = fontSizeNormalDiv;
+  aboutPara.style.writingMode = projectsPara.style.writingMode = contactPara.style.writingMode = "horizontal-tb";
+  aboutPara.style.visibility = projectsPara.style.visibility = contactPara.style.visibility = "visible";
+  aboutDiv.style.alignItems = "center";
+  
+
 }
