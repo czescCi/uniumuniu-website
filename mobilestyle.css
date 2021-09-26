@@ -1,9 +1,15 @@
+  html {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+  }
+  
   body {
     font-family: "Quicksand", sans-serif;
     margin: 0;
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth;
     overflow-y: scroll;
-    scroll-snap-type: y mandatory;
+    scroll-snap-type: y mandatory; */
   }
   
   .section {
@@ -84,7 +90,7 @@
 
   #contact {
     background-color: #131b26;
-    height: calc(100vh - 35px);
+    height: calc(100vh - 60px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -202,7 +208,7 @@
 
   .footer ion-icon {
     color: white;
-    font-size: 20px;
+    font-size: 22px;
     padding: 3px;
 
     /* &:nth-of-type(1) {
