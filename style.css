@@ -37,6 +37,7 @@ main {
     position: relative;
     border-style: solid;
     border-color: #f8a23a;
+    cursor: pointer;
 }
 
 /* .nav-div:hover {

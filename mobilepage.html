@@ -11,27 +11,30 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet"> 
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="fullpage.css" /> 
     </head>
     <body>
-        <div class="section" id="about" data-label="About">
-            <img id="logo" src="res/logo.png"></img>
-        </div>
-        <div class="section" id="projects" data-label="Projects">
-        <div class="image-grid">
-            <img class="image-grid-col-2 image-grid-row-2" src="res/project1.jpg" alt="projects">
-            <img src="res/project2.jpg" alt="toller">
-            <img src="res/project3.jpg" alt="baby">
-            <img src="res/project4.jpg" alt="wedding">
-            <img src="res/project5.jpg" alt="vancouver">
-        </div> 
-        </div>
-        <div class="section" id="contact" data-label="Contact">
-                <textarea class="textarea" placeholder="Contact me"></textarea>
-                <div id="btn-container">
-                    <button id="textarea-btn">
-                        <i class="ri-mail-line"></i>
-                    </button>
+        <div id= "fullpage">
+            <div class="section" id="about" data-label="About">
+                <img id="logo" src="res/logo.png"></img>
+            </div>
+            <div class="section" id="projects" data-label="Projects">
+            <div class="image-grid">
+                <img class="image-grid-col-2 image-grid-row-2" src="res/project1.jpg" alt="projects">
+                <img src="res/project2.jpg" alt="toller">
+                <img src="res/project3.jpg" alt="baby">
+                <img src="res/project4.jpg" alt="wedding">
+                <img src="res/project5.jpg" alt="vancouver">
+            </div> 
+            </div>
+            <div class="section" id="contact" data-label="Contact">
+                    <textarea class="textarea" placeholder="Contact me"></textarea>
+                    <div id="btn-container">
+                        <button id="textarea-btn">
+                            <i class="ri-mail-line"></i>
+                        </button>
+                </div>
             </div>
         </div>
 
@@ -43,29 +46,9 @@
             <ion-icon name="logo-whatsapp"></ion-icon>
             <ion-icon id="last-logo" name="share-social"></ion-icon>
         </footer>
-
-        
-        <!-- <nav class="nav">
-                <div class="nav-item">
-                    <a href="#about" class="nav-link"></a>
-                    <span class="nav-label">About</span>
-                </div>
-
-                <div class="nav-item">
-                    <a href="#projects" class="nav-link nav-link-selected"></a>
-                    <span class="nav-label">Projects</span>
-                </div>
-
-                <div class="nav-item">
-                    <a href="#contact" class="nav-link"></a>
-                    <span class="nav-label">Contact</span>
-                </div>
-
-        </nav> -->
-    
-    
         
         <script src="mobilescript.js" async defer></script>
+        <script type="text/javascript" src="fullpage.js"></script>
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     </body>
