@@ -48,16 +48,16 @@ new fullScroll({
 
 // MY SOLUTION
 
-// const logo = document.getElementById('logo');
+const logo = document.getElementById('logo');
 
-// logo.onclick = function() {
-//   let splitedFullFileName = this.src.split('/');
-//   let fileName = splitedFullFileName[splitedFullFileName.length - 1];
-//   if (fileName === "logo.png") {
-//     logo.src = "res/logo_orange.png";
-//   } else {
-//     logo.src = "res/logo.png";
-//   }
-// }
+logo.onclick = function() {
+    let splitedFullFileName = this.src.split('/');
+    let fileName = splitedFullFileName[splitedFullFileName.length - 1];
+    if (fileName === "logo.png") {
+        logo.src = "res/logo_orange.png";
+    } else {
+        logo.src = "res/logo.png";
+    }
+}
 
 // ///C:/Projects/uniumuniu-website/res/logo.png

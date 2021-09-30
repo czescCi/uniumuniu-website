@@ -3,20 +3,20 @@
 body,
 html {
     width: 100%;
-    height: 100%
+    height: 100%;
 }
 
 body,
 html {
     margin: 0;
     padding: 0;
-    overflow: hidden
+    overflow: hidden;
 }
 
 .scroll-container {
     position: relative;
     margin: 0;
-    padding: 0
+    padding: 0;
 }
 
 .dots {
@@ -29,14 +29,14 @@ html {
     -moz-transform: translateY(-50%);
     -o-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
-    transform: translateY(-50%)
+    transform: translateY(-50%);
 }
 
 .dots li a {
     padding: 10px;
     width: 4px;
     height: 5px;
-    display: block
+    display: block;
 }
 
 .dots li a:before {
@@ -54,7 +54,7 @@ html {
     -moz-transition: -moz-transform .3s ease, background-color .3s ease;
     -ms-transition: -ms-transform .3s ease, background-color .3s ease;
     -o-transition: -o-transform .3s ease, background-color .3s ease;
-    transition: transform .3s ease, background-color .3s ease
+    transition: transform .3s ease, background-color .3s ease;
 }
 
 .dots li a.active:before {
@@ -68,13 +68,13 @@ html {
     -moz-transform: scale(1);
     -ms-transform: scale(1);
     -o-transform: scale(1);
-    transform: scale(1)
+    transform: scale(1);
 }
 
 .dots-right {
-    left: 25px
+    left: 25px;
 }
 
 .dots-left {
-    right: 10px
+    right: 10px;
 }
