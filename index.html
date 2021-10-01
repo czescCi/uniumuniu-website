@@ -13,34 +13,46 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet"> 
     </head>
     <body>
-        <!-- <header></header> -->
+        <header></header>
 
-        <!-- <nav>
-            <ul>
-                <li><img src="res/logo.png"></img></li>
-                <li><a>About</a></li>
-                <li><a>Projects</a></li>
-                <li><a>Contact</a></li>
-            </ul>
-        </nav> -->
+        <main>
+            <div id="about" class="nav-div" data-label="About">
+                <!-- <div id="img-div"> -->
+                    <img id="logo" src="res/logo.png"></img>
+                <!-- </div> -->
+                <p id= "about-para" class="nav-para">about</p>
+            </div>
+            <div id="projects" class="nav-div" data-label="Projects">
+                <p id= "projects-para" class="nav-para">projects</p>
+            </div>
+            <div id="contact" class="nav-div" data-label="Contact">
+                <p id= "contact-para" class="nav-para">contact</p>
+            </div>
+            <nav class="nav">
+                <div class="nav-item">
+                    <a href="#about" class="nav-link">Bottle</a>
+                    <span class="nav-label">About</span>
+                </div>
+
+                <div class="nav-item">
+                    <a href="#projects" class="nav-link">Bottle</a>
+                    <span class="nav-label">Projects</span>
+                </div>
+
+                <div class="nav-item">
+                    <a href="#about" class="nav-link">Bottle</a>
+                    <span class="nav-label">Contact</span>
+                </div>
+
+            </nav>
+        </main>
     
-        <!-- <main> -->
-            <div class="empty-div" class="main-child"></div>
-            <div class="main-child" id="logo-child">
-                <img src="res/logo_orange.png" id="logo"></img>
-                <h1 id="message">Coming soon!</h1>
-            </div>
-            <div class="main-child" id="message-child">
-                
-            </div>
-            <div class="empty-div" class="main-child"></div>
-        <!-- </main> -->
 
-        <footer>
+        <!-- <footer>
             <div class="footer-child">
                 <p id="maker">made by J.</p>
             </div>
-        </footer>
+        </footer> -->
         
         <script src="script.js" async defer></script>
     </body>
