@@ -17,6 +17,12 @@
       scroll-snap-align: center;
   } */
   
+  @media screen and (max-width: 1024px) {
+      .textarea {
+          width: 250px;
+      }
+  }
+  
   @keyframes about-bgd {
       from {
           background-color: #131b26;
@@ -73,9 +79,10 @@
   .image-grid-col-2 {
       grid-column: span 2;
   }
-  /* .image-grid-row-2 {
+  
+  .image-grid-row-2 {
       grid-row: span 2;
-  } */
+  }
   
   @media screen and (max-width: 1024px) {
       .image-grid {
@@ -150,12 +157,6 @@
       font-size: 30px;
   }
   
-  @media screen and (max-width: 1024px) {
-      .textarea {
-          width: 250px;
-      }
-  }
-  
   .textarea:hover {
       cursor: pointer;
       background-color: #eeeeee;
@@ -209,6 +210,14 @@
       transform: scale(1.4);
   }
   
+  .footer {
+      background-color: #131b26;
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+      height: 35px;
+  }
+  
   .footer ion-icon {
       color: white;
       font-size: 22px;
@@ -221,12 +230,4 @@
   
   #last-logo {
       margin-right: 10px;
-  }
-  
-  .footer {
-      background-color: #131b26;
-      display: flex;
-      justify-content: flex-end;
-      width: 100%;
-      height: 35px;
   }
