@@ -12,7 +12,7 @@ let projectsPara = document.getElementById("projects-para");
 let contactPara = document.getElementById("contact-para");
 let logo = document.getElementById("logo");
 let smallDivFontSize = "30px";
-let DivFontSize = "50px";
+let normalDivFontSize = "50px";
 let logoSmallSize = "100px";
 let logoNormalSize = "300px";
 let marginBottom = "30px";
@@ -92,7 +92,7 @@ function resetDivs() {
     aboutDiv.style.flexGrow = projectsDiv.style.flexGrow = contactDiv.style.flexGrow = 1;
     logo.style.width = logoNormalSize;
     logo.style.height = logoNormalSize;
-    aboutPara.style.fontSize = projectsPara.style.fontSize = contactPara.style.fontSize = DivFontSize;
+    aboutPara.style.fontSize = projectsPara.style.fontSize = contactPara.style.fontSize = normalDivFontSize;
     aboutPara.style.writingMode = projectsPara.style.writingMode = contactPara.style.writingMode = "horizontal-tb";
     aboutPara.style.visibility = projectsPara.style.visibility = contactPara.style.visibility = "visible";
     aboutDiv.style.alignItems = "center";
