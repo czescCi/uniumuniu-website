@@ -33,12 +33,15 @@
             </div>
         </section>
         <section id="contact" data-label="Contact">
-            <textarea class="textarea" placeholder="Contact me"></textarea>
-            <div id="btn-container">
-                <button id="textarea-btn">
-                    <i class="ri-mail-line"></i>
-                </button>
-            </div>
+            <form id="contact-form" method="POST" action="send" enctype="multipart/form-data">
+                <textarea class="textarea" placeholder="Contact me" name="required"></textarea>
+                <div id="btn-container">
+                    <button id="textarea-btn" type="submit" value="submit">
+                        <i class="ri-mail-line"></i>
+                    </button>
+                </div>
+            </form>
+
         </section>
     </div>
 
