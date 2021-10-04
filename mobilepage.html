@@ -14,6 +14,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
 
 <body>
@@ -31,12 +33,32 @@
             </div>
         </section>
         <section id="contact" data-label="Contact">
-            <textarea class="textarea" placeholder="Contact me"></textarea>
-            <div id="btn-container">
-                <button id="textarea-btn">
-                    <i class="ri-mail-line"></i>
-                </button>
-            </div>
+            <!-- <form id="contact-form" method="POST" action="send" enctype="multipart/form-data">
+                <textarea class="textarea" placeholder="Contact me" name="required"></textarea>
+                <div id="btn-container">
+                    <button id="textarea-btn" type="submit" value="submit">
+                        <i class="ri-mail-line"></i>
+                    </button>
+                </div>
+            </form> -->
+            <form id="contact-form" method="POST" action="send" enctype="multipart/form-data">
+                <div>
+                    <div>
+                        <div>
+                            <input placeholder="Name" id="name" name="name" type="text" required />
+                        </div>
+                        <div>
+                            <input placeholder="Email" id="email" type="email" name="email" aria-describedby="emailHelp" required />
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <input placeholder="Subject" id="subject" name="subject" type="text" required />
+                </div>
+                <div>
+                    <textarea placeholder="Message" id="message" name="message" rows="3" required></textarea>
+                </div>
+                <button type="submit" value="submit">Submit</button>
         </section>
     </div>
 
