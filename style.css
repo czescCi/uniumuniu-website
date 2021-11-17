@@ -81,6 +81,10 @@ main {
     justify-content: center;
 }
 
+#message {
+    resize: none;
+}
+
 
 /* 
 footer {
