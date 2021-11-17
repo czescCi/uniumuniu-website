@@ -11,6 +11,7 @@ body {
     font-family: 'Roboto Mono', monospace;
 }
 
+
 /* .img-div {
     height: 100%;
     display: flex;
@@ -40,6 +41,7 @@ main {
     cursor: pointer;
 }
 
+
 /* .nav-div:hover {
     background-color: #f8a23a;
 } */
@@ -49,6 +51,10 @@ main {
     bottom: 0;
     font-size: 50px;
     color: #f8a23a;
+}
+
+#contact-form {
+    visibility: hidden;
 }
 
 #about {
@@ -75,9 +81,6 @@ main {
     justify-content: center;
 }
 
-.nav {
-    display: none;
-}
 
 /* 
 footer {

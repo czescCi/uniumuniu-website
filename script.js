@@ -10,12 +10,16 @@ let contactDiv = document.getElementById("contact");
 let aboutPara = document.getElementById("about-para");
 let projectsPara = document.getElementById("projects-para");
 let contactPara = document.getElementById("contact-para");
+let contactForm = document.getElementById("contact-form");
 let logo = document.getElementById("logo");
 let smallDivFontSize = "30px";
 let normalDivFontSize = "50px";
 let logoSmallSize = "100px";
 let logoNormalSize = "300px";
 let marginBottom = "30px";
+let bgColorOver = "#f8a23a";
+let bgColor = "#131b26";
+
 
 // let mouseOverBgdColor = function() {
 //     navItems.style.backgroundColor = "#f8a23a";
@@ -36,20 +40,28 @@ let marginBottom = "30px";
 //   navItems.style.flexGrow = "6";
 //   navPara.style.visibility = "hidden";
 // }
+let changeColor = (div, para, toActive) => {
+    if (toActive) {
+        div.style.backgroundColor = bgColorOver;
+        para.style.color = bgColor;
+    } else {
+        div.style.backgroundColor = bgColor;
+        para.style.color = bgColorOver;
+    }
+}
 
 for (let i = 0; i < navItems.length; i++) {
     navItems[i].addEventListener("mouseover", function() {
-        navItems[i].style.backgroundColor = "#f8a23a";
-        navPara[i].style.color = "#131b26";
+        changeColor(navItems[i], navPara[i], true);
     });
 
     navItems[i].addEventListener("mouseout", function() {
-        navItems[i].style.backgroundColor = "#131b26";
-        navPara[i].style.color = "#f8a23a";
+        changeColor(navItems[i], navPara[i], false);
+
     });
 }
 
-aboutDiv.onclick = function() {
+aboutDiv.onclick = () => {
     resetDivs();
     aboutDiv.style.flexGrow = "6";
     projectsPara.style.fontSize = smallDivFontSize;
@@ -58,9 +70,10 @@ aboutDiv.onclick = function() {
     contactPara.style.writingMode = "vertical-rl";
     projectsPara.style.marginBottom = marginBottom;
     contactPara.style.marginBottom = marginBottom;
+    changeColor(aboutDiv, aboutPara, true);
 }
 
-projectsDiv.onclick = function() {
+projectsDiv.onclick = () => {
     resetDivs();
     projectsDiv.style.flexGrow = "6";
     aboutDiv.style.alignItems = "stretch";
@@ -74,7 +87,7 @@ projectsDiv.onclick = function() {
     logo.style.height = logoSmallSize;
 }
 
-contactDiv.onclick = function() {
+contactDiv.onclick = () => {
     resetDivs();
     contactDiv.style.flexGrow = "6";
     aboutDiv.style.alignItems = "stretch";
@@ -86,9 +99,10 @@ contactDiv.onclick = function() {
     projectsPara.style.marginBottom = marginBottom;
     logo.style.width = logoSmallSize;
     logo.style.height = logoSmallSize;
+    contactForm.style.visibility = "visible";
 }
 
-function resetDivs() {
+let resetDivs = () => {
     aboutDiv.style.flexGrow = projectsDiv.style.flexGrow = contactDiv.style.flexGrow = 1;
     logo.style.width = logoNormalSize;
     logo.style.height = logoNormalSize;
@@ -96,4 +110,5 @@ function resetDivs() {
     aboutPara.style.writingMode = projectsPara.style.writingMode = contactPara.style.writingMode = "horizontal-tb";
     aboutPara.style.visibility = projectsPara.style.visibility = contactPara.style.visibility = "visible";
     aboutDiv.style.alignItems = "center";
+    contactForm.style.visibility = "hidden";
 }

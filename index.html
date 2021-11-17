@@ -30,25 +30,27 @@
             <p id="projects-para" class="nav-para">projects</p>
         </div>
         <div id="contact" class="nav-div" data-label="Contact">
+            <form id="contact-form" method="POST" action="send" enctype="multipart/form-data">
+                <div>
+                    <div>
+                        <div>
+                            <input placeholder="Name" id="name" name="name" type="text" required />
+                        </div>
+                        <div>
+                            <input placeholder="Email" id="email" type="email" name="email" aria-describedby="emailHelp" required />
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <input placeholder="Subject" id="subject" name="subject" type="text" required />
+                </div>
+                <div>
+                    <textarea placeholder="Message" id="message" name="message" rows="3" required></textarea>
+                </div>
+                <button type="submit" value="submit">Submit</button>
+            </form>
             <p id="contact-para" class="nav-para">contact</p>
         </div>
-        <nav class="nav">
-            <div class="nav-item">
-                <a href="#about" class="nav-link">Bottle</a>
-                <span class="nav-label">About</span>
-            </div>
-
-            <div class="nav-item">
-                <a href="#projects" class="nav-link">Bottle</a>
-                <span class="nav-label">Projects</span>
-            </div>
-
-            <div class="nav-item">
-                <a href="#about" class="nav-link">Bottle</a>
-                <span class="nav-label">Contact</span>
-            </div>
-
-        </nav>
     </main>
 
 
