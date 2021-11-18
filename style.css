@@ -54,7 +54,8 @@ main {
 }
 
 #contact-form {
-    visibility: hidden;
+    visibility: collapse;
+    width: 350px;
 }
 
 #about {
@@ -83,6 +84,58 @@ main {
 
 #message {
     resize: none;
+}
+
+label {
+    font-size: 0.85em;
+    margin-left: 12px;
+}
+
+input[type=text],
+input[type=email],
+textarea {
+    font-family: 'Roboto Mono', monospace;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    resize: vertical;
+}
+
+input[type=text]:focus,
+input[type=email]:focus,
+textarea:focus {
+    border: 1px solid black;
+}
+
+button[type=submit] {
+    background: #f8a23a;
+    margin: 0 auto;
+    outline: 0;
+    color: #131b26;
+    border: 0;
+    padding: 12px 24px;
+    border-radius: 4px;
+    transition: all ease-in-out 0.1s;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+button[type=submit]:focus {
+    background: #f8a23a;
+    color: #131b26;
+}
+
+button[type=submit]:hover {
+    background: #f8a23a;
+}
+
+.center {
+    text-align: center;
 }
 
 

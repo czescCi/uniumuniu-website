@@ -50,6 +50,14 @@ let changeColor = (div, para, toActive) => {
     }
 }
 
+let changeLogo = (logoSmall) => {
+    if (logoSmall) {
+        logo.style.width = logo.style.height = logoSmallSize;
+    } else {
+        logo.style.width = logo.style.height = logoNormalSize;
+    }
+}
+
 for (let i = 0; i < navItems.length; i++) {
     navItems[i].addEventListener("mouseover", function() {
         changeColor(navItems[i], navPara[i], true);
@@ -57,7 +65,6 @@ for (let i = 0; i < navItems.length; i++) {
 
     navItems[i].addEventListener("mouseout", function() {
         changeColor(navItems[i], navPara[i], false);
-
     });
 }
 
@@ -70,7 +77,6 @@ aboutDiv.onclick = () => {
     contactPara.style.writingMode = "vertical-rl";
     projectsPara.style.marginBottom = marginBottom;
     contactPara.style.marginBottom = marginBottom;
-    changeColor(aboutDiv, aboutPara, true);
 }
 
 projectsDiv.onclick = () => {
@@ -83,8 +89,7 @@ projectsDiv.onclick = () => {
     contactPara.style.writingMode = "vertical-rl";
     aboutPara.style.marginBottom = marginBottom;
     contactPara.style.marginBottom = marginBottom;
-    logo.style.width = logoSmallSize;
-    logo.style.height = logoSmallSize;
+    changeLogo(true);
 }
 
 contactDiv.onclick = () => {
@@ -97,18 +102,16 @@ contactDiv.onclick = () => {
     projectsPara.style.writingMode = "vertical-rl";
     aboutPara.style.marginBottom = marginBottom;
     projectsPara.style.marginBottom = marginBottom;
-    logo.style.width = logoSmallSize;
-    logo.style.height = logoSmallSize;
+    changeLogo(true);
     contactForm.style.visibility = "visible";
 }
 
 let resetDivs = () => {
     aboutDiv.style.flexGrow = projectsDiv.style.flexGrow = contactDiv.style.flexGrow = 1;
-    logo.style.width = logoNormalSize;
-    logo.style.height = logoNormalSize;
+    changeLogo(false);
     aboutPara.style.fontSize = projectsPara.style.fontSize = contactPara.style.fontSize = normalDivFontSize;
     aboutPara.style.writingMode = projectsPara.style.writingMode = contactPara.style.writingMode = "horizontal-tb";
     aboutPara.style.visibility = projectsPara.style.visibility = contactPara.style.visibility = "visible";
     aboutDiv.style.alignItems = "center";
-    contactForm.style.visibility = "hidden";
+    contactForm.style.visibility = "collapse";
 }
