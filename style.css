@@ -54,7 +54,7 @@ main {
 }
 
 #contact-form {
-    visibility: collapse;
+    display: none;
     width: 350px;
 }
 
@@ -123,6 +123,7 @@ button[type=submit] {
     position: relative;
     display: inline-block;
     text-align: center;
+    cursor: pointer;
 }
 
 button[type=submit]:focus {

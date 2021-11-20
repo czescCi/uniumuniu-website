@@ -12,6 +12,7 @@ let projectsPara = document.getElementById("projects-para");
 let contactPara = document.getElementById("contact-para");
 let contactForm = document.getElementById("contact-form");
 let logo = document.getElementById("logo");
+let submitBtn = document.getElementById("submit-btn");
 let smallDivFontSize = "30px";
 let normalDivFontSize = "50px";
 let logoSmallSize = "100px";
@@ -19,6 +20,7 @@ let logoNormalSize = "300px";
 let marginBottom = "30px";
 let bgColorOver = "#f8a23a";
 let bgColor = "#131b26";
+let writingMode = "vertical-rl";
 
 
 // let mouseOverBgdColor = function() {
@@ -44,9 +46,14 @@ let changeColor = (div, para, toActive) => {
     if (toActive) {
         div.style.backgroundColor = bgColorOver;
         para.style.color = bgColor;
+        submitBtn.style.backgroundColor = bgColor;
+        submitBtn.style.color = bgColorOver;
     } else {
         div.style.backgroundColor = bgColor;
         para.style.color = bgColorOver;
+        submitBtn.style.backgroundColor = bgColorOver;
+        submitBtn.style.color = bgColor;
+
     }
 }
 
@@ -68,8 +75,26 @@ for (let i = 0; i < navItems.length; i++) {
     });
 }
 
+// let setToActive = (div) => {
+//     div.setAttribute('class', 'active');
+// }
+
+// let activeFormatting = (div, nonActiveDiv1, nonActiveDiv2) => {
+//     if ('id' === 'active') {
+//         aboutDiv.style.flexGrow = "6";
+//         projectsPara.style.fontSize = smallDivFontSize;
+//         contactPara.style.fontSize = smallDivFontSize;
+//         projectsPara.style.writingMode = "vertical-rl";
+//         contactPara.style.writingMode = "vertical-rl";
+//         projectsPara.style.marginBottom = marginBottom;
+//         contactPara.style.marginBottom = marginBottom;
+//     }
+// }
+// TODO: jesli zakladka kliknieta to cursor zmienic na normalny
+
 aboutDiv.onclick = () => {
     resetDivs();
+    // setToActive(aboutDiv);
     aboutDiv.style.flexGrow = "6";
     projectsPara.style.fontSize = smallDivFontSize;
     contactPara.style.fontSize = smallDivFontSize;
@@ -81,12 +106,13 @@ aboutDiv.onclick = () => {
 
 projectsDiv.onclick = () => {
     resetDivs();
+    // setToActive(projectsDiv);
     projectsDiv.style.flexGrow = "6";
     aboutDiv.style.alignItems = "stretch";
     aboutPara.style.fontSize = smallDivFontSize;
     contactPara.style.fontSize = smallDivFontSize;
-    aboutPara.style.writingMode = "vertical-rl";
-    contactPara.style.writingMode = "vertical-rl";
+    aboutPara.style.writingMode = writingMode;
+    contactPara.style.writingMode = writingMode;
     aboutPara.style.marginBottom = marginBottom;
     contactPara.style.marginBottom = marginBottom;
     changeLogo(true);
@@ -94,16 +120,17 @@ projectsDiv.onclick = () => {
 
 contactDiv.onclick = () => {
     resetDivs();
+    // setToActive(contactDiv);
     contactDiv.style.flexGrow = "6";
     aboutDiv.style.alignItems = "stretch";
     aboutPara.style.fontSize = smallDivFontSize;
     projectsPara.style.fontSize = smallDivFontSize;
-    aboutPara.style.writingMode = "vertical-rl";
-    projectsPara.style.writingMode = "vertical-rl";
+    aboutPara.style.writingMode = writingMode;
+    projectsPara.style.writingMode = writingMode;
     aboutPara.style.marginBottom = marginBottom;
     projectsPara.style.marginBottom = marginBottom;
     changeLogo(true);
-    contactForm.style.visibility = "visible";
+    contactForm.style.display = "inline";
 }
 
 let resetDivs = () => {
@@ -113,5 +140,5 @@ let resetDivs = () => {
     aboutPara.style.writingMode = projectsPara.style.writingMode = contactPara.style.writingMode = "horizontal-tb";
     aboutPara.style.visibility = projectsPara.style.visibility = contactPara.style.visibility = "visible";
     aboutDiv.style.alignItems = "center";
-    contactForm.style.visibility = "collapse";
+    contactForm.style.display = "none";
 }
