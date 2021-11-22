@@ -76,37 +76,29 @@ for (let i = 0; i < navItems.length; i++) {
 }
 
 // let setToActive = (div) => {
-//     div.setAttribute('class', 'active');
+//     div.classList.add("active");
 // }
 
 // let activeFormatting = (div, nonActiveDiv1, nonActiveDiv2) => {
-//     if ('id' === 'active') {
-//         aboutDiv.style.flexGrow = "6";
-//         projectsPara.style.fontSize = smallDivFontSize;
-//         contactPara.style.fontSize = smallDivFontSize;
-//         projectsPara.style.writingMode = "vertical-rl";
-//         contactPara.style.writingMode = "vertical-rl";
-//         projectsPara.style.marginBottom = marginBottom;
-//         contactPara.style.marginBottom = marginBottom;
+//     if (div.classList.contains("active")) {
+//         div.style.flexGrow = "6";
+//         div.style.cursor = "default";
+//         nonActiveDiv1.style.fontSize = nonActiveDiv2.style.fontSize = smallDivFontSize;
+//         nonActiveDiv1.style.writingMode = nonActiveDiv2.style.writingMode = writingMode;
+//         nonActiveDiv1.style.marginBottom = nonActiveDiv2.style.marginBottom = marginBottom;
 //     }
 // }
 // TODO: jesli zakladka kliknieta to cursor zmienic na normalny
 
-aboutDiv.onclick = () => {
-    resetDivs();
-    // setToActive(aboutDiv);
-    aboutDiv.style.flexGrow = "6";
-    projectsPara.style.fontSize = smallDivFontSize;
-    contactPara.style.fontSize = smallDivFontSize;
-    projectsPara.style.writingMode = "vertical-rl";
-    contactPara.style.writingMode = "vertical-rl";
-    projectsPara.style.marginBottom = marginBottom;
-    contactPara.style.marginBottom = marginBottom;
-}
+// aboutDiv.onclick = () => {
+//     resetDivs();
+//     setToActive(aboutDiv);
+//     activeFormatting(aboutDiv, projectsDiv, contactDiv);
+// }
 
 projectsDiv.onclick = () => {
     resetDivs();
-    // setToActive(projectsDiv);
+    setToActive(projectsDiv);
     projectsDiv.style.flexGrow = "6";
     aboutDiv.style.alignItems = "stretch";
     aboutPara.style.fontSize = smallDivFontSize;
@@ -120,7 +112,7 @@ projectsDiv.onclick = () => {
 
 contactDiv.onclick = () => {
     resetDivs();
-    // setToActive(contactDiv);
+    setToActive(contactDiv);
     contactDiv.style.flexGrow = "6";
     aboutDiv.style.alignItems = "stretch";
     aboutPara.style.fontSize = smallDivFontSize;
