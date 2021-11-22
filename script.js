@@ -75,54 +75,54 @@ for (let i = 0; i < navItems.length; i++) {
     });
 }
 
-// let setToActive = (div) => {
-//     div.classList.add("active");
-// }
+let addActiveClass = (div) => {
+    div.classList.add("active");
+}
 
-// let activeFormatting = (div, nonActiveDiv1, nonActiveDiv2) => {
-//     if (div.classList.contains("active")) {
-//         div.style.flexGrow = "6";
-//         div.style.cursor = "default";
-//         nonActiveDiv1.style.fontSize = nonActiveDiv2.style.fontSize = smallDivFontSize;
-//         nonActiveDiv1.style.writingMode = nonActiveDiv2.style.writingMode = writingMode;
-//         nonActiveDiv1.style.marginBottom = nonActiveDiv2.style.marginBottom = marginBottom;
-//     }
-// }
+let removeActiveClass = (div) => {
+    div.classList.remove("active");
+}
+
+let activeFormatting = (div, nonActiveDiv1, nonActiveDiv2) => {
+    if (div.classList.contains("active") && div === aboutDiv || div === projectsDiv) {
+        div.style.flexGrow = "6";
+        div.style.cursor = "default";
+        nonActiveDiv1.style.alignItems = "stretch";
+        nonActiveDiv1.style.fontSize = nonActiveDiv2.style.fontSize = smallDivFontSize;
+        nonActiveDiv1.style.writingMode = nonActiveDiv2.style.writingMode = writingMode;
+        nonActiveDiv1.style.marginBottom = nonActiveDiv2.style.marginBottom = marginBottom;
+    } else if (div.classList.contains("active") && div === contactDiv) {
+        div.style.flexGrow = "6";
+        div.style.cursor = "default";
+        nonActiveDiv1.style.alignItems = "stretch";
+        nonActiveDiv1.style.fontSize = nonActiveDiv2.style.fontSize = smallDivFontSize;
+        nonActiveDiv1.style.writingMode = nonActiveDiv2.style.writingMode = writingMode;
+        nonActiveDiv1.style.marginBottom = nonActiveDiv2.style.marginBottom = marginBottom;
+        contactForm.style.display = "inline";
+    } else {
+        
+    }
+}
 // TODO: jesli zakladka kliknieta to cursor zmienic na normalny
 
-// aboutDiv.onclick = () => {
-//     resetDivs();
-//     setToActive(aboutDiv);
-//     activeFormatting(aboutDiv, projectsDiv, contactDiv);
-// }
+aboutDiv.onclick = () => {
+    resetDivs();
+    addActiveClass(aboutDiv);
+    activeFormatting(aboutDiv, projectsDiv, contactDiv);
+}
 
 projectsDiv.onclick = () => {
     resetDivs();
-    setToActive(projectsDiv);
-    projectsDiv.style.flexGrow = "6";
-    aboutDiv.style.alignItems = "stretch";
-    aboutPara.style.fontSize = smallDivFontSize;
-    contactPara.style.fontSize = smallDivFontSize;
-    aboutPara.style.writingMode = writingMode;
-    contactPara.style.writingMode = writingMode;
-    aboutPara.style.marginBottom = marginBottom;
-    contactPara.style.marginBottom = marginBottom;
+    addActiveClass(projectsDiv);
+    activeFormatting(projectsDiv, aboutDiv, contactDiv);
     changeLogo(true);
 }
 
 contactDiv.onclick = () => {
     resetDivs();
-    setToActive(contactDiv);
-    contactDiv.style.flexGrow = "6";
-    aboutDiv.style.alignItems = "stretch";
-    aboutPara.style.fontSize = smallDivFontSize;
-    projectsPara.style.fontSize = smallDivFontSize;
-    aboutPara.style.writingMode = writingMode;
-    projectsPara.style.writingMode = writingMode;
-    aboutPara.style.marginBottom = marginBottom;
-    projectsPara.style.marginBottom = marginBottom;
+    addActiveClass(contactDiv);
+    activeFormatting(contactDiv, aboutDiv, projectsDiv);
     changeLogo(true);
-    contactForm.style.display = "inline";
 }
 
 let resetDivs = () => {
