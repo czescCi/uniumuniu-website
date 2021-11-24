@@ -10,12 +10,12 @@
   /* scroll-behavior: smooth;
     overflow-y: scroll;
     scroll-snap-type: y mandatory; */
-  /* }
+  /* } */
   
   section {
       height: 100vh;
-      scroll-snap-align: center;
-  } */
+      /* scroll-snap-align: center; */
+  }
   
   @media screen and (max-width: 1024px) {
       .textarea {
@@ -100,43 +100,43 @@
   
   #contact {
       background-color: #131b26;
-      /* height: calc(100vh - 60px); */
+      /* height: calc(100vh - 35px); */
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
   }
-  
+/*   
   .textarea {
       display: block;
       background-color: #dddddd;
       color: #666666;
       padding: 1em;
-      border-radius: 10px;
+      border-radius: 10px; */
       /* border-top-left-radius: 10px;
     border-top-right-radius: 10px; */
-      border: 2px solid transparent;
+      /* border: 2px solid transparent;
       outline: none;
       font-weight: 500;
       font-size: 16px;
       line-height: 1.4;
       width: 300px;
       height: 200px;
-      transition: all 0.2s;
+      transition: all 0.2s; */
       /* resize: vertical; */
-  }
+  /* }
   
   #btn-container {
       margin-top: 6px;
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: center; */
       /* width: 100%;
     height: 30px;
     background-color: #dddddd;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px; */
-  }
+  /* }
   
   #textarea-btn {
       width: 50px;
@@ -145,12 +145,12 @@
       border: 0px;
       align-items: center;
       justify-content: center;
-      cursor: pointer;
+      cursor: pointer; */
       /* border-bottom-right-radius: 10px;
     border: 0px;
     background-color: #dddddd;
     padding-bottom: 0px; */
-  }
+  /* }
   
   .ri-mail-line {
       color: #131b26;
@@ -167,7 +167,40 @@
       color: #333333;
       background-color: white;
       border-color: #f8a23a;
-  }
+  } */
+
+  input[type=text],
+input[type=email],
+textarea {
+    font-family: 'Roboto Mono', monospace;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    resize: vertical;
+}
+
+button[type=submit] {
+    background: #f8a23a;
+    margin: 0 auto;
+    outline: 0;
+    color: #131b26;
+    border: 0;
+    padding: 12px 24px;
+    border-radius: 4px;
+    transition: all ease-in-out 0.1s;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.center {
+    text-align: center;
+}
+
   
   .nav {
       --nav-gap: 15px;
@@ -215,7 +248,6 @@
       display: flex;
       justify-content: flex-end;
       width: 100%;
-      height: 35px;
   }
   
   .footer ion-icon {

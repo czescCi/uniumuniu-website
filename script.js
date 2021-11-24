@@ -103,7 +103,6 @@ let activeFormatting = (div, nonActiveDiv1, nonActiveDiv2) => {
         
     }
 }
-// TODO: jesli zakladka kliknieta to cursor zmienic na normalny
 
 aboutDiv.onclick = () => {
     resetDivs();
