@@ -83,21 +83,23 @@ let removeActiveClass = (div) => {
     div.classList.remove("active");
 }
 
-let activeFormatting = (div, nonActiveDiv1, nonActiveDiv2) => {
+// need to make background color to stay and cursor is not working properly.
+
+let activeFormatting = (div, nonActiveDiv1, nonActivePara1, nonActivePara2) => {
     if (div.classList.contains("active") && div === aboutDiv || div === projectsDiv) {
         div.style.flexGrow = "6";
         div.style.cursor = "default";
         nonActiveDiv1.style.alignItems = "stretch";
-        nonActiveDiv1.style.fontSize = nonActiveDiv2.style.fontSize = smallDivFontSize;
-        nonActiveDiv1.style.writingMode = nonActiveDiv2.style.writingMode = writingMode;
-        nonActiveDiv1.style.marginBottom = nonActiveDiv2.style.marginBottom = marginBottom;
+        nonActivePara1.style.fontSize = nonActivePara2.style.fontSize = smallDivFontSize;
+        nonActivePara1.style.writingMode = nonActivePara2.style.writingMode = writingMode;
+        nonActivePara1.style.marginBottom = nonActivePara2.style.marginBottom = marginBottom;
     } else if (div.classList.contains("active") && div === contactDiv) {
         div.style.flexGrow = "6";
         div.style.cursor = "default";
         nonActiveDiv1.style.alignItems = "stretch";
-        nonActiveDiv1.style.fontSize = nonActiveDiv2.style.fontSize = smallDivFontSize;
-        nonActiveDiv1.style.writingMode = nonActiveDiv2.style.writingMode = writingMode;
-        nonActiveDiv1.style.marginBottom = nonActiveDiv2.style.marginBottom = marginBottom;
+        nonActivePara1.style.fontSize = nonActivePara2.style.fontSize = smallDivFontSize;
+        nonActivePara1.style.writingMode = nonActivePara2.style.writingMode = writingMode;
+        nonActivePara1.style.marginBottom = nonActivePara2.style.marginBottom = marginBottom;
         contactForm.style.display = "inline";
     } else {
         
@@ -107,20 +109,20 @@ let activeFormatting = (div, nonActiveDiv1, nonActiveDiv2) => {
 aboutDiv.onclick = () => {
     resetDivs();
     addActiveClass(aboutDiv);
-    activeFormatting(aboutDiv, projectsDiv, contactDiv);
+    activeFormatting(aboutDiv, projectsDiv, projectsPara, contactPara);
 }
 
 projectsDiv.onclick = () => {
     resetDivs();
     addActiveClass(projectsDiv);
-    activeFormatting(projectsDiv, aboutDiv, contactDiv);
+    activeFormatting(projectsDiv, aboutDiv, aboutPara, contactPara);
     changeLogo(true);
 }
 
 contactDiv.onclick = () => {
     resetDivs();
     addActiveClass(contactDiv);
-    activeFormatting(contactDiv, aboutDiv, projectsDiv);
+    activeFormatting(contactDiv, aboutDiv, aboutPara, projectsPara);
     changeLogo(true);
 }
 
