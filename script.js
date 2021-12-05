@@ -76,6 +76,7 @@ for (let i = 0; i < navItems.length; i++) {
 
 let addActiveClass = (div) => {
     div.classList.add("active");
+    div.classList.remove("nonactive");
 }
 
 let removeActiveClass = (div) => {
@@ -88,16 +89,16 @@ let activeFormatting = (div, nonActiveDiv1, nonActivePara1, nonActivePara2) => {
         // div.style.flexGrow = "6";
         // div.style.cursor = "default";
         // nonActiveDiv1.style.alignItems = "stretch";
-        // nonActivePara1.style.fontSize = nonActivePara2.style.fontSize = smallDivFontSize;
-        // nonActivePara1.style.writingMode = nonActivePara2.style.writingMode = writingMode;
-        // nonActivePara1.style.marginBottom = nonActivePara2.style.marginBottom = marginBottom;
+        nonActivePara1.style.fontSize = nonActivePara2.style.fontSize = smallDivFontSize;
+        nonActivePara1.style.writingMode = nonActivePara2.style.writingMode = writingMode;
+        nonActivePara1.style.marginBottom = nonActivePara2.style.marginBottom = marginBottom;
     } else if (div.classList.contains("active") && div === contactDiv) {
         // div.style.flexGrow = "6";
         // div.style.cursor = "default";
         // nonActiveDiv1.style.alignItems = "stretch";
-        // nonActivePara1.style.fontSize = nonActivePara2.style.fontSize = smallDivFontSize;
-        // nonActivePara1.style.writingMode = nonActivePara2.style.writingMode = writingMode;
-        // nonActivePara1.style.marginBottom = nonActivePara2.style.marginBottom = marginBottom;
+        nonActivePara1.style.fontSize = nonActivePara2.style.fontSize = smallDivFontSize;
+        nonActivePara1.style.writingMode = nonActivePara2.style.writingMode = writingMode;
+        nonActivePara1.style.marginBottom = nonActivePara2.style.marginBottom = marginBottom;
         contactForm.style.display = "inline";
     } else {
         
@@ -105,32 +106,34 @@ let activeFormatting = (div, nonActiveDiv1, nonActivePara1, nonActivePara2) => {
 }
 
 aboutDiv.onclick = () => {
-    resetDivs();
+    resetAllDivs();
     addActiveClass(aboutDiv);
     activeFormatting(aboutDiv, projectsDiv, projectsPara, contactPara);
 }
 
 projectsDiv.onclick = () => {
-    resetDivs();
+    resetAllDivs();
     addActiveClass(projectsDiv);
     activeFormatting(projectsDiv, aboutDiv, aboutPara, contactPara);
     changeLogo(true);
 }
 
 contactDiv.onclick = () => {
-    resetDivs();
+    resetAllDivs();
     addActiveClass(contactDiv);
     activeFormatting(contactDiv, aboutDiv, aboutPara, projectsPara);
     changeLogo(true);
 }
 
-let resetDivs = () => {
+let resetAllDivs = () => {
     // aboutDiv.style.flexGrow = projectsDiv.style.flexGrow = contactDiv.style.flexGrow = 1;
     changeLogo(false);
-    // aboutPara.style.fontSize = projectsPara.style.fontSize = contactPara.style.fontSize = normalDivFontSize;
-    // aboutPara.style.writingMode = projectsPara.style.writingMode = contactPara.style.writingMode = "horizontal-tb";
-    // aboutPara.style.visibility = projectsPara.style.visibility = contactPara.style.visibility = "visible";
+    aboutPara.style.fontSize = projectsPara.style.fontSize = contactPara.style.fontSize = normalDivFontSize;
+    aboutPara.style.writingMode = projectsPara.style.writingMode = contactPara.style.writingMode = "horizontal-tb";
+    aboutPara.style.visibility = projectsPara.style.visibility = contactPara.style.visibility = "visible";
     // aboutDiv.style.alignItems = "center";
     contactForm.style.display = "none";
-    removeActiveClass();
+    removeActiveClass(aboutDiv);
+    removeActiveClass(projectsDiv);
+    removeActiveClass(contactDiv);
 }

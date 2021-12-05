@@ -187,17 +187,12 @@ footer {
     cursor: default;
     flex-grow: 6;
     align-items: stretch;
-    font-size: var(--smallDivFontSize);
-    writing-mode: var(--writingModeActive);
-    margin-bottom: var(--marginBottom);
     background-color: var(--bgColorOver);
 }
 
 .nonactive {
     cursor: pointer;
     flex-grow: 1;
-    font-size: var(--normalDivFontSize);
-    writing-mode: var(--writingModeNonActive);
     visibility: visible;
     align-items: center;
     background-color: var(--bgColor);
