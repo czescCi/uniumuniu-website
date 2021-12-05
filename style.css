@@ -169,3 +169,36 @@ footer {
     color: #f5deb3;
     font-size: 10px;
 } */
+
+:root {
+--smallDivFontSize: 30px;
+--normalDivFontSize: 50px;
+--logoSmallSize: 100px;
+--logoNormalSize: 300px;
+--marginBottom: 30px;
+--bgColorOver: #f8a23a;
+--bgColor: #131b26;
+--writingModeActive: vertical-rl;
+--writingModeNonActive: horizontal-tb;
+}
+
+
+.active {
+    cursor: default;
+    flex-grow: 6;
+    align-items: stretch;
+    font-size: var(--smallDivFontSize);
+    writing-mode: var(--writingModeActive);
+    margin-bottom: var(--marginBottom);
+    background-color: var(--bgColorOver);
+}
+
+.nonactive {
+    cursor: pointer;
+    flex-grow: 1;
+    font-size: var(--normalDivFontSize);
+    writing-mode: var(--writingModeNonActive);
+    visibility: visible;
+    align-items: center;
+    background-color: var(--bgColor);
+}

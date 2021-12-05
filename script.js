@@ -53,7 +53,6 @@ let changeColor = (div, para, toActive) => {
         para.style.color = bgColorOver;
         submitBtn.style.backgroundColor = bgColorOver;
         submitBtn.style.color = bgColor;
-
     }
 }
 
@@ -81,25 +80,24 @@ let addActiveClass = (div) => {
 
 let removeActiveClass = (div) => {
     div.classList.remove("active");
+    div.classList.add("nonactive");
 }
-
-// need to make background color to stay and cursor is not working properly.
 
 let activeFormatting = (div, nonActiveDiv1, nonActivePara1, nonActivePara2) => {
     if (div.classList.contains("active") && div === aboutDiv || div === projectsDiv) {
-        div.style.flexGrow = "6";
-        div.style.cursor = "default";
-        nonActiveDiv1.style.alignItems = "stretch";
-        nonActivePara1.style.fontSize = nonActivePara2.style.fontSize = smallDivFontSize;
-        nonActivePara1.style.writingMode = nonActivePara2.style.writingMode = writingMode;
-        nonActivePara1.style.marginBottom = nonActivePara2.style.marginBottom = marginBottom;
+        // div.style.flexGrow = "6";
+        // div.style.cursor = "default";
+        // nonActiveDiv1.style.alignItems = "stretch";
+        // nonActivePara1.style.fontSize = nonActivePara2.style.fontSize = smallDivFontSize;
+        // nonActivePara1.style.writingMode = nonActivePara2.style.writingMode = writingMode;
+        // nonActivePara1.style.marginBottom = nonActivePara2.style.marginBottom = marginBottom;
     } else if (div.classList.contains("active") && div === contactDiv) {
-        div.style.flexGrow = "6";
-        div.style.cursor = "default";
-        nonActiveDiv1.style.alignItems = "stretch";
-        nonActivePara1.style.fontSize = nonActivePara2.style.fontSize = smallDivFontSize;
-        nonActivePara1.style.writingMode = nonActivePara2.style.writingMode = writingMode;
-        nonActivePara1.style.marginBottom = nonActivePara2.style.marginBottom = marginBottom;
+        // div.style.flexGrow = "6";
+        // div.style.cursor = "default";
+        // nonActiveDiv1.style.alignItems = "stretch";
+        // nonActivePara1.style.fontSize = nonActivePara2.style.fontSize = smallDivFontSize;
+        // nonActivePara1.style.writingMode = nonActivePara2.style.writingMode = writingMode;
+        // nonActivePara1.style.marginBottom = nonActivePara2.style.marginBottom = marginBottom;
         contactForm.style.display = "inline";
     } else {
         
@@ -127,11 +125,12 @@ contactDiv.onclick = () => {
 }
 
 let resetDivs = () => {
-    aboutDiv.style.flexGrow = projectsDiv.style.flexGrow = contactDiv.style.flexGrow = 1;
+    // aboutDiv.style.flexGrow = projectsDiv.style.flexGrow = contactDiv.style.flexGrow = 1;
     changeLogo(false);
-    aboutPara.style.fontSize = projectsPara.style.fontSize = contactPara.style.fontSize = normalDivFontSize;
-    aboutPara.style.writingMode = projectsPara.style.writingMode = contactPara.style.writingMode = "horizontal-tb";
-    aboutPara.style.visibility = projectsPara.style.visibility = contactPara.style.visibility = "visible";
-    aboutDiv.style.alignItems = "center";
+    // aboutPara.style.fontSize = projectsPara.style.fontSize = contactPara.style.fontSize = normalDivFontSize;
+    // aboutPara.style.writingMode = projectsPara.style.writingMode = contactPara.style.writingMode = "horizontal-tb";
+    // aboutPara.style.visibility = projectsPara.style.visibility = contactPara.style.visibility = "visible";
+    // aboutDiv.style.alignItems = "center";
     contactForm.style.display = "none";
+    removeActiveClass();
 }
