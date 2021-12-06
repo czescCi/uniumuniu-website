@@ -178,8 +178,8 @@ footer {
 --marginBottom: 30px;
 --bgColorOver: #f8a23a;
 --bgColor: #131b26;
---writingModeActive: vertical-rl;
---writingModeNonActive: horizontal-tb;
+--writingModeNonActive: vertical-rl;
+--writingModeActive: horizontal-tb;
 }
 
 
@@ -196,4 +196,18 @@ footer {
     visibility: visible;
     align-items: center;
     background-color: var(--bgColor);
+}
+
+.active-para {
+    font-size: var(--normalDivFontSize);
+    color: var(--bgColor);
+    writing-mode: var(--writingModeActive);
+    margin-bottom: var(--marginBottom);
+}
+
+.nonactive-para {
+    font-size: var(--smallDivFontSize);
+    color: var(--bgColorOver);
+    writing-mode: var(--writingModeNonActive);
+    margin-bottom: var(--marginBottom);
 }
