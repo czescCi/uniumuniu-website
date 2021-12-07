@@ -20,13 +20,13 @@ let bgColor = "#131b26";
 
 let changeColor = (div, para, toActive) => {
     if (toActive) {
-        // div.style.backgroundColor = bgColorOver;
-        // para.style.color = bgColor;
+        div.style.backgroundColor = bgColorOver;
+        para.style.color = bgColor;
         submitBtn.style.backgroundColor = bgColor;
         submitBtn.style.color = bgColorOver;
     } else {
-        // div.style.backgroundColor = bgColor;
-        // para.style.color = bgColorOver;
+        div.style.backgroundColor = bgColor;
+        para.style.color = bgColorOver;
         submitBtn.style.backgroundColor = bgColorOver;
         submitBtn.style.color = bgColor;
     }
@@ -40,15 +40,23 @@ let changeLogo = (div) => {
     }
 }
 
-for (let i = 0; i < navItems.length; i++) {
-    navItems[i].addEventListener("mouseover", function() {
-        changeColor(navItems[i], navPara[i], true);
-    });
-
-    navItems[i].addEventListener("mouseout", function() {
-        changeColor(navItems[i], navPara[i], false);
-    });
+let bgColorChange = function(div) {
+    for (let i = 0; i < navItems.length; i++) {
+        navItems[i].addEventListener("mouseover", function() {
+            changeColor(navItems[i], navPara[i], true);
+        });
+        
+        if (div.classList.contains("active")) {
+                
+        } else {
+            navItems[i].addEventListener("mouseout", function() {
+                changeColor(navItems[i], navPara[i], false);
+            });
+        }
+        
+    }
 }
+
 
 let addActiveClass = (div, para) => {
     div.classList.add("active");
@@ -77,6 +85,7 @@ aboutDiv.onclick = () => {
     addActiveClass(aboutDiv, aboutPara);
     isContactFormVisible(aboutDiv);
     changeLogo(aboutDiv)
+    bgColorChange(aboutDiv);
 }
 
 projectsDiv.onclick = () => {
@@ -84,6 +93,7 @@ projectsDiv.onclick = () => {
     addActiveClass(projectsDiv, projectsPara);
     isContactFormVisible(projectsDiv);
     changeLogo(projectsDiv);
+    bgColorChange(projectsDiv);
 }
 
 contactDiv.onclick = () => {
@@ -91,6 +101,7 @@ contactDiv.onclick = () => {
     addActiveClass(contactDiv, contactPara);
     isContactFormVisible(contactDiv);
     changeLogo(contactDiv);
+    bgColorChange(contactDiv);
 }
 
 let resetAllDivs = () => {

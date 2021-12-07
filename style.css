@@ -188,6 +188,7 @@ footer {
     flex-grow: 6;
     align-items: stretch;
     background-color: var(--bgColorOver);
+    border-color: var(--bgColor);
 }
 
 .nonactive {
