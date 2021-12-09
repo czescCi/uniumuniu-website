@@ -13,6 +13,7 @@ let contactPara = document.getElementById("contact-para");
 let contactForm = document.getElementById("contact-form");
 let logo = document.getElementById("logo");
 let submitBtn = document.getElementById("submit-btn");
+let projectsContainer = document.getElementById("project-container");
 let logoSmallSize = "100px";
 let logoNormalSize = "300px";
 let bgColorOver = "#f8a23a";
@@ -45,18 +46,15 @@ let bgColorChange = function(div) {
         navItems[i].addEventListener("mouseover", function() {
             changeColor(navItems[i], navPara[i], true);
         });
-        
-        if (div.classList.contains("active")) {
-                
-        } else {
-            navItems[i].addEventListener("mouseout", function() {
+
+        navItems[i].addEventListener("mouseout", function() {
+            if (div.classList.contains("nonactive")) {
                 changeColor(navItems[i], navPara[i], false);
+            }
             });
         }
         
     }
-}
-
 
 let addActiveClass = (div, para) => {
     div.classList.add("active");
@@ -80,10 +78,19 @@ let isContactFormVisible = (div) => {
     }
 }
 
+let isProjectListVisible = (div) => {
+    if (div.classList.contains("active") && div === projectsDiv) {
+        projectsContainer.style.display = "flex";
+    } else {
+        projectsContainer.style.display  = "none";
+    }
+}
+
 aboutDiv.onclick = () => {
     resetAllDivs();
     addActiveClass(aboutDiv, aboutPara);
     isContactFormVisible(aboutDiv);
+    isProjectListVisible(aboutDiv);
     changeLogo(aboutDiv)
     bgColorChange(aboutDiv);
 }
@@ -92,6 +99,7 @@ projectsDiv.onclick = () => {
     resetAllDivs();
     addActiveClass(projectsDiv, projectsPara);
     isContactFormVisible(projectsDiv);
+    isProjectListVisible(projectsDiv);
     changeLogo(projectsDiv);
     bgColorChange(projectsDiv);
 }
@@ -100,6 +108,7 @@ contactDiv.onclick = () => {
     resetAllDivs();
     addActiveClass(contactDiv, contactPara);
     isContactFormVisible(contactDiv);
+    isProjectListVisible(contactDiv);
     changeLogo(contactDiv);
     bgColorChange(contactDiv);
 }

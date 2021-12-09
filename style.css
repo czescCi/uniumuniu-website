@@ -2,6 +2,20 @@ html {
     height: 100%;
 }
 
+
+:root {
+    --smallDivFontSize: 30px;
+    --normalDivFontSize: 50px;
+    --logoSmallSize: 100px;
+    --logoNormalSize: 300px;
+    --marginBottom: 30px;
+    --bgColorOver: #f8a23a;
+    --bgColor: #131b26;
+    --project-para-color: #ffffff;
+    --writingModeNonActive: vertical-rl;
+    --writingModeActive: horizontal-tb;
+    }    
+
 body {
     height: 100%;
     display: flex;
@@ -72,6 +86,22 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#project-container {
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+}
+
+#project-container p {
+    text-align: center;
+    color: var(--project-para-color);
+}
+
+#wolf-logo {
+    height: 100px;
 }
 
 #contact {
@@ -169,19 +199,6 @@ footer {
     color: #f5deb3;
     font-size: 10px;
 } */
-
-:root {
---smallDivFontSize: 30px;
---normalDivFontSize: 50px;
---logoSmallSize: 100px;
---logoNormalSize: 300px;
---marginBottom: 30px;
---bgColorOver: #f8a23a;
---bgColor: #131b26;
---writingModeNonActive: vertical-rl;
---writingModeActive: horizontal-tb;
-}
-
 
 .active {
     cursor: default;
