@@ -2,7 +2,6 @@ html {
     height: 100%;
 }
 
-
 :root {
     --smallDivFontSize: 30px;
     --normalDivFontSize: 50px;
@@ -80,6 +79,10 @@ main {
     justify-content: center;
 }
 
+#about-text {
+    display: none;
+}
+
 #projects {
     /* background-color: forestgreen; */
     border-width: 0 1px 0 0;
@@ -98,6 +101,7 @@ main {
 #project-container p {
     text-align: center;
     color: var(--project-para-color);
+    margin-top: 30px;
 }
 
 #wolf-logo {
@@ -143,10 +147,10 @@ textarea:focus {
 }
 
 button[type=submit] {
-    background: #f8a23a;
+    background: #131b26;
     margin: 0 auto;
     outline: 0;
-    color: #131b26;
+    color: #f8a23a;
     border: 0;
     padding: 12px 24px;
     border-radius: 4px;
@@ -158,12 +162,12 @@ button[type=submit] {
 }
 
 button[type=submit]:focus {
-    background: #f8a23a;
-    color: #131b26;
+    background: #131b26;
+    color: #f8a23a;
 }
 
 button[type=submit]:hover {
-    background: #f8a23a;
+    background: #131b26ad;
 }
 
 .center {
@@ -205,6 +209,7 @@ footer {
     flex-grow: 6;
     align-items: stretch;
     background-color: var(--bgColorOver);
+    border-width: 0px 1px;
     border-color: var(--bgColor);
 }
 
@@ -214,6 +219,8 @@ footer {
     visibility: visible;
     align-items: center;
     background-color: var(--bgColor);
+    border-width: 0 1px;
+    border-color: var(--bgColor);
 }
 
 .active-para {
