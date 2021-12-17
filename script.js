@@ -71,11 +71,11 @@ let removeActiveClass = (div, para) => {
     para.classList.add("nonactive-para");
 }
 
-let visibilityOfContactForm = (div) => {
-    if (div.classList.contains("active") && div === contactDiv) {
-        contactForm.style.display = "inline";
+let visibilityOfAboutText = (div) => {
+    if (div.classList.contains("active") && div === aboutDiv) {
+        aboutText.style.display = "flex";
     } else {
-        contactForm.style.display = "none";
+        aboutText.style.display  = "none";
     }
 }
 
@@ -87,11 +87,11 @@ let visibilityOfProjectList = (div) => {
     }
 }
 
-let visibilityOfAboutText = (div) => {
-    if (div.classList.contains("active") && div === aboutDiv) {
-        aboutText.style.display = "flex";
+let visibilityOfContactForm = (div) => {
+    if (div.classList.contains("active") && div === contactDiv) {
+        contactForm.style.display = "inline";
     } else {
-        aboutText.style.display  = "none";
+        contactForm.style.display = "none";
     }
 }
 

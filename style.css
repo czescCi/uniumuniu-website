@@ -1,5 +1,6 @@
 html {
     height: 100%;
+    color: #131b26;
 }
 
 :root {
@@ -81,6 +82,17 @@ main {
 
 #about-text {
     display: none;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 30px;
+}
+
+#about-text h2 {
+    text-align: justify;
+}
+
+#github {
+    font-size: 30px;
 }
 
 #projects {
@@ -99,7 +111,7 @@ main {
 }
 
 #project-container p {
-    text-align: center;
+    text-align: justify;
     color: var(--project-para-color);
     margin-top: 30px;
 }
