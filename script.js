@@ -11,10 +11,11 @@ let aboutPara = document.getElementById("about-para");
 let projectsPara = document.getElementById("projects-para");
 let contactPara = document.getElementById("contact-para");
 let contactForm = document.getElementById("contact-form");
-let logo = document.getElementById("logo");
+let smallLogo = document.getElementById("small-logo");
+let normalLogo = document.getElementById("normal-logo");
 let submitBtn = document.getElementById("submit-btn");
 let projectsContainer = document.getElementById("project-container");
-let aboutText = document.getElementById("about-text");
+let aboutContent = document.getElementById("about-content");
 let logoSmallSize = "100px";
 let logoNormalSize = "300px";
 let bgColorOver = "#f8a23a";
@@ -49,11 +50,10 @@ let changeColor = (div, para, toActive) => {
 
 let changeLogo = (div) => {
     if (div.classList.contains("active") && div === aboutDiv) {
-        logo.style.width = logo.style.height = logoNormalSize;
-        logo.style.alignSelf = "center";
+        normalLogo.style.display = "flex";
     } else {
-        logo.style.width = logo.style.height = logoSmallSize;
-        logo.style.alignSelf = "flex-start";
+        smallLogo.style.display = "flex";
+        smallLogo.style.alignSelf = "flex-start";
     }
 }
 
@@ -71,11 +71,11 @@ let removeActiveClass = (div, para) => {
     para.classList.add("nonactive-para");
 }
 
-let visibilityOfAboutText = (div) => {
+let visibilityOfaboutContent = (div) => {
     if (div.classList.contains("active") && div === aboutDiv) {
-        aboutText.style.display = "flex";
+        aboutContent.style.display = "flex";
     } else {
-        aboutText.style.display  = "none";
+        aboutContent.style.display  = "none";
     }
 }
 
@@ -100,7 +100,7 @@ aboutDiv.onclick = () => {
     addActiveClass(aboutDiv, aboutPara);
     visibilityOfContactForm(aboutDiv);
     visibilityOfProjectList(aboutDiv);
-    visibilityOfAboutText(aboutDiv);
+    visibilityOfaboutContent(aboutDiv);
     changeLogo(aboutDiv)
     changeColor(projectsDiv, projectsPara, false);
     changeColor(contactDiv, contactPara, false);
@@ -111,7 +111,7 @@ projectsDiv.onclick = () => {
     addActiveClass(projectsDiv, projectsPara);
     visibilityOfContactForm(projectsDiv);
     visibilityOfProjectList(projectsDiv);
-    visibilityOfAboutText(projectsDiv);
+    visibilityOfaboutContent(projectsDiv);
     changeLogo(projectsDiv);
     changeColor(aboutDiv, aboutPara, false);
     changeColor(contactDiv, contactPara, false);
@@ -122,7 +122,7 @@ contactDiv.onclick = () => {
     addActiveClass(contactDiv, contactPara);
     visibilityOfContactForm(contactDiv);
     visibilityOfProjectList(contactDiv);
-    visibilityOfAboutText(contactDiv);
+    visibilityOfaboutContent(contactDiv);
     changeLogo(contactDiv);
     changeColor(aboutDiv, aboutPara, false);
     changeColor(projectsDiv, projectsPara, false);
