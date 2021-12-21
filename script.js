@@ -11,8 +11,7 @@ let aboutPara = document.getElementById("about-para");
 let projectsPara = document.getElementById("projects-para");
 let contactPara = document.getElementById("contact-para");
 let contactForm = document.getElementById("contact-form");
-let smallLogo = document.getElementById("small-logo");
-let normalLogo = document.getElementById("normal-logo");
+let logo = document.getElementById("logo");
 let submitBtn = document.getElementById("submit-btn");
 let projectsContainer = document.getElementById("project-container");
 let aboutContent = document.getElementById("about-content");
@@ -50,10 +49,11 @@ let changeColor = (div, para, toActive) => {
 
 let changeLogo = (div) => {
     if (div.classList.contains("active") && div === aboutDiv) {
-        normalLogo.style.display = "flex";
+        logo.style.width = logo.style.height = logoNormalSize;
+        logo.style.alignSelf = "center";
     } else {
-        smallLogo.style.display = "flex";
-        smallLogo.style.alignSelf = "flex-start";
+        logo.style.width = logo.style.height = logoSmallSize;
+        logo.style.alignSelf = "flex-start";
     }
 }
 

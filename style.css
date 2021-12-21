@@ -33,16 +33,9 @@ body {
     align-items: center;
 } */
 
-#normal-logo {
+#logo {
     height: 300px;
     width: 300px;
-    display: flex;
-}
-
-#small-logo {
-    height: 100px;
-    width: 100px;
-    display: none;
 }
 
 main {
@@ -83,6 +76,7 @@ main {
     /* background-color: darkmagenta; */
     border-width: 0 1px 0 0;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -100,6 +94,11 @@ main {
 
 #github {
     font-size: 30px;
+}
+
+#projects-icon #contact-icon {
+    font-size: 300px;
+    color: white;
 }
 
 #projects {
