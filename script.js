@@ -11,10 +11,13 @@ let aboutPara = document.getElementById("about-para");
 let projectsPara = document.getElementById("projects-para");
 let contactPara = document.getElementById("contact-para");
 let contactForm = document.getElementById("contact-form");
+let projectsIcon = document.getElementById("projects-icon");
+let contactIcon = document.getElementById("contact-icon");
 let logo = document.getElementById("logo");
 let submitBtn = document.getElementById("submit-btn");
 let projectsContainer = document.getElementById("project-container");
 let aboutContent = document.getElementById("about-content");
+
 let logoSmallSize = "100px";
 let logoNormalSize = "300px";
 let bgColorOver = "#f8a23a";
@@ -82,6 +85,7 @@ let visibilityOfaboutContent = (div) => {
 let visibilityOfProjectList = (div) => {
     if (div.classList.contains("active") && div === projectsDiv) {
         projectsContainer.style.display = "flex";
+        projectsIcon.style.display = "none";
     } else {
         projectsContainer.style.display  = "none";
     }
@@ -90,6 +94,7 @@ let visibilityOfProjectList = (div) => {
 let visibilityOfContactForm = (div) => {
     if (div.classList.contains("active") && div === contactDiv) {
         contactForm.style.display = "inline";
+        contactIcon.style.display = "none";
     } else {
         contactForm.style.display = "none";
     }

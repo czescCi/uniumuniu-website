@@ -92,13 +92,18 @@ main {
     text-align: justify;
 }
 
-#github {
+.fa-github {
     font-size: 30px;
 }
 
-#projects-icon #contact-icon {
-    font-size: 300px;
+.fa-envelope {
     color: white;
+    font-size: 150px;
+}
+
+.fa-edit {
+    color: white;
+    font-size: 150px;
 }
 
 #projects {
