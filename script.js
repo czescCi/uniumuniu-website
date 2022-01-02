@@ -53,10 +53,13 @@ let changeColor = (div, para, toActive) => {
 let changeLogo = (div) => {
     if (div.classList.contains("active") && div === aboutDiv) {
         logo.style.width = logo.style.height = logoNormalSize;
-        logo.style.alignSelf = "center";
-    } else {
+        projectsIcon.style.fontSize = contactIcon.style.fontSize = "50px";
+    } else if (div.classList.contains("active") && div === projectsDiv) {
+        contactIcon.style.fontSize = "50px";
         logo.style.width = logo.style.height = logoSmallSize;
-        logo.style.alignSelf = "flex-start";
+    } else if (div.classList.contains("active") && div === contactDiv) {
+        projectsIcon.style.fontSize = "50px";
+        logo.style.width = logo.style.height = logoSmallSize;
     }
 }
 
@@ -77,6 +80,8 @@ let removeActiveClass = (div, para) => {
 let visibilityOfaboutContent = (div) => {
     if (div.classList.contains("active") && div === aboutDiv) {
         aboutContent.style.display = "flex";
+        projectsIcon.style.display = "inline"
+        contactIcon.style.display = "inline"
     } else {
         aboutContent.style.display  = "none";
     }
@@ -86,6 +91,7 @@ let visibilityOfProjectList = (div) => {
     if (div.classList.contains("active") && div === projectsDiv) {
         projectsContainer.style.display = "flex";
         projectsIcon.style.display = "none";
+        contactIcon.style.display = "inline"
     } else {
         projectsContainer.style.display  = "none";
     }
@@ -95,6 +101,7 @@ let visibilityOfContactForm = (div) => {
     if (div.classList.contains("active") && div === contactDiv) {
         contactForm.style.display = "inline";
         contactIcon.style.display = "none";
+        projectsIcon.style.display = "inline"
     } else {
         contactForm.style.display = "none";
     }

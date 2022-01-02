@@ -244,6 +244,8 @@ footer {
     background-color: var(--bgColor);
     border-width: 0 1px;
     border-color: var(--bgColor);
+    border-right-color: var(--bgColorOver);
+    border-right-width: 1px;
 }
 
 .active-para {
