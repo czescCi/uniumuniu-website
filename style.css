@@ -48,11 +48,14 @@ main {
 }
 
 .nav-div {
+    display: flex;
     flex: 1 0;
-    position: relative;
     border-style: solid;
     border-color: #f8a23a;
     cursor: pointer;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -75,10 +78,6 @@ main {
 #about {
     /* background-color: darkmagenta; */
     border-width: 0 1px 0 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
 #about-content {
@@ -109,9 +108,6 @@ main {
 #projects {
     /* background-color: forestgreen; */
     border-width: 0 1px 0 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 #project-container {
@@ -134,10 +130,6 @@ main {
 #contact {
     /* background-color: blue; */
     border-width: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
 #message {
@@ -232,20 +224,21 @@ footer {
     flex-grow: 6;
     align-items: stretch;
     background-color: var(--bgColorOver);
-    border-width: 0px 1px;
-    border-color: var(--bgColor);
+    border: 1px solid var(--bgColor);
 }
 
 .nonactive {
     cursor: pointer;
     flex-grow: 1;
     visibility: visible;
-    align-items: center;
     background-color: var(--bgColor);
-    border-width: 0 1px;
-    border-color: var(--bgColor);
-    border-right-color: var(--bgColorOver);
-    border-right-width: 1px;
+    border-right: 1px solid var(--bgColor);
+    border-left: 1px solid var(--bgColor);
+}
+
+.nav-div.nonactive {
+    justify-content: flex-start;
+    align-content: flex-start;
 }
 
 .active-para {
