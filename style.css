@@ -58,6 +58,11 @@ main {
     justify-content: center;
 }
 
+.section-content {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
 
 /* .nav-div:hover {
     background-color: #f8a23a;
@@ -80,11 +85,18 @@ main {
     border-width: 0 1px 0 0;
 }
 
+#about-container {
+    align-items: center;
+    flex-direction: column;
+}
+
+#about-container p {
+    text-align: justify;
+    margin-top: 30px;
+}
+
 #about-content {
     display: none;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 80px;
 }
 
 #about-content h2 {

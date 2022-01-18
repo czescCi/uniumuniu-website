@@ -22,21 +22,23 @@
 
     <main>
         <div id="about" class="nav-div" data-label="About">
-            <img id="logo" src="res/logo.png"></img>
-            <div id="about-content">
-                <h2>
+            <div class="section-content">
+                <div id="about-container">
+                <img id="logo" src="res/logo.png"></img>
+                    <p id="about-content">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                     Vivamus semper sem eu volutpat dapibus. Etiam lorem orci, efficitur et tellus sit amet,
                     placerat fringilla orci.
-                </h2>
-                <i class="fab fa-github"></i>
+                    </p>
+                </div>
+                <p id="about-para" class="nav-para">about</p>
             </div>
-            <p id="about-para" class="nav-para">about</p>
         </div>
         <div id="projects" class="nav-div" data-label="Projects">
-            <div id="project-container">
-                <img id="wolf-logo" src="res/wolf.png">
-                <p>
+            <div class="section-content">
+                <div id="project-container">
+                    <img id="wolf-logo" src="res/wolf.png">
+                    <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                     Vivamus semper sem eu volutpat dapibus. Etiam lorem orci, efficitur et tellus sit amet,
                     placerat fringilla orci. Donec facilisis lectus nisl, 
@@ -46,43 +48,46 @@
                     lectus vitae quam porttitor commodo in vel nibh. 
                     Nam faucibus ut erat blandit molestie. Donec egestas sed 
                     nunc ac accumsan.
-                </p>
+                    </p>
+                </div>
+                <i id="projects-icon" class="far fa-edit"></i>
+                <p id="projects-para" class="nav-para">projects</p>
             </div>
-            <i id="projects-icon" class="far fa-edit"></i>
-            <p id="projects-para" class="nav-para">projects</p>
         </div>
         <div id="contact" class="nav-div" data-label="Contact">
-            <form id="contact-form" method="POST" action="send" enctype="multipart/form-data">
-                <div>
+            <div class="section-content">
+                <form id="contact-form" method="POST" action="send" enctype="multipart/form-data">
                     <div>
                         <div>
-                            <input placeholder="Name" id="name" name="name" type="text" required />
-                        </div>
-                        <div>
-                            <input placeholder="Email" id="email" type="email" name="email" aria-describedby="emailHelp" required />
+                            <div>
+                                <input placeholder="Name" id="name" name="name" type="text" required />
+                            </div>
+                            <div>
+                                <input placeholder="Email" id="email" type="email" name="email" aria-describedby="emailHelp" required />
+                            </div>
                         </div>
                     </div>
-                </div>
-                <!-- <div>
-                    <input placeholder="Subject" id="subject" name="subject" type="text" required />
-                </div> -->
-                <div>
-                    <textarea placeholder="Message" id="message" name="message" rows="8" required></textarea>
-                </div>
-                <div class="center">
-                    <button id="submit-btn" type="submit" value="submit">Submit</button>
-                </div>
-            </form>
-            <i id="contact-icon" class="far fa-envelope"></i>
-            <p id="contact-para" class="nav-para">contact</p>
-            <!-- <footer class="footer">
-                <ion-icon name="logo-linkedin"></ion-icon>
-                <ion-icon name="logo-github"></ion-icon>
-                <ion-icon name="logo-instagram"></ion-icon>
-                <ion-icon name="logo-facebook"></ion-icon>
-                <ion-icon name="logo-whatsapp"></ion-icon>
-                <ion-icon id="last-logo" name="share-social"></ion-icon>
-            </footer> -->
+                    <!-- <div>
+                        <input placeholder="Subject" id="subject" name="subject" type="text" required />
+                    </div> -->
+                    <div>
+                        <textarea placeholder="Message" id="message" name="message" rows="8" required></textarea>
+                    </div>
+                    <div class="center">
+                        <button id="submit-btn" type="submit" value="submit">Submit</button>
+                    </div>
+                </form>
+                <i id="contact-icon" class="far fa-envelope"></i>
+                <p id="contact-para" class="nav-para">contact</p>
+                <!-- <footer class="footer">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                    <ion-icon name="logo-github"></ion-icon>
+                    <ion-icon name="logo-instagram"></ion-icon>
+                    <ion-icon name="logo-facebook"></ion-icon>
+                    <ion-icon name="logo-whatsapp"></ion-icon>
+                    <ion-icon id="last-logo" name="share-social"></ion-icon>
+                </footer> -->
+            </div>
         </div>
     </main>
 

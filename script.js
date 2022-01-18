@@ -22,6 +22,8 @@ let logoSmallSize = "100px";
 let logoNormalSize = "300px";
 let bgColorOver = "#f8a23a";
 let bgColor = "#131b26";
+let iconSmall = "70px";
+let iconMarginTop = "15px";
 
 let addMouseEventListeners = function() {
     for (let i = 0; i < navItems.length; i++) {
@@ -53,12 +55,15 @@ let changeColor = (div, para, toActive) => {
 let changeLogo = (div) => {
     if (div.classList.contains("active") && div === aboutDiv) {
         logo.style.width = logo.style.height = logoNormalSize;
-        projectsIcon.style.fontSize = contactIcon.style.fontSize = "50px";
+        projectsIcon.style.fontSize = contactIcon.style.fontSize = iconSmall;
+        projectsIcon.style.marginTop = contactIcon.style.marginTop = iconMarginTop;
     } else if (div.classList.contains("active") && div === projectsDiv) {
-        contactIcon.style.fontSize = "50px";
+        contactIcon.style.fontSize = iconSmall;
+        contactIcon.style.marginTop = iconMarginTop;
         logo.style.width = logo.style.height = logoSmallSize;
     } else if (div.classList.contains("active") && div === contactDiv) {
-        projectsIcon.style.fontSize = "50px";
+        projectsIcon.style.fontSize = iconSmall;
+        projectsIcon.style.marginTop = iconMarginTop;
         logo.style.width = logo.style.height = logoSmallSize;
     }
 }
