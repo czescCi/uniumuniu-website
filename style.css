@@ -14,7 +14,7 @@ html {
     --project-para-color: #ffffff;
     --writingModeNonActive: vertical-rl;
     --writingModeActive: horizontal-tb;
-    }    
+}
 
 body {
     height: 100%;
@@ -48,11 +48,20 @@ main {
 }
 
 .nav-div {
+    display: flex;
     flex: 1 0;
-    position: relative;
     border-style: solid;
     border-color: #f8a23a;
     cursor: pointer;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-content {
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
 
 
@@ -75,32 +84,43 @@ main {
 #about {
     /* background-color: darkmagenta; */
     border-width: 0 1px 0 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
-#about-text {
-    display: none;
+#about-container {
+    align-items: center;
     flex-direction: column;
-    align-items: center;
-    margin-right: 30px;
 }
 
-#about-text h2 {
+#about-container p {
+    text-align: justify;
+    margin-top: 30px;
+}
+
+#about-content {
+    display: none;
+}
+
+#about-content h2 {
     text-align: justify;
 }
 
-#github {
+.fa-github {
     font-size: 30px;
+}
+
+.fa-envelope {
+    color: white;
+    font-size: 150px;
+}
+
+.fa-edit {
+    color: white;
+    font-size: 150px;
 }
 
 #projects {
     /* background-color: forestgreen; */
     border-width: 0 1px 0 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 #project-container {
@@ -123,10 +143,6 @@ main {
 #contact {
     /* background-color: blue; */
     border-width: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
 #message {
@@ -185,6 +201,8 @@ button[type=submit]:hover {
 .center {
     text-align: center;
 }
+
+
 /* 
 .footer {
     background-color: #131b26;
@@ -199,11 +217,14 @@ button[type=submit]:hover {
     /* &:nth-of-type(1) {
     margin-right: 10px;
   } */
+
+
 /* }
 
 #last-logo {
     margin-right: 10px;
 } */
+
 
 /* 
 footer {
@@ -221,18 +242,21 @@ footer {
     flex-grow: 6;
     align-items: stretch;
     background-color: var(--bgColorOver);
-    border-width: 0px 1px;
-    border-color: var(--bgColor);
+    border: 1px solid var(--bgColor);
 }
 
 .nonactive {
     cursor: pointer;
     flex-grow: 1;
     visibility: visible;
-    align-items: center;
     background-color: var(--bgColor);
-    border-width: 0 1px;
-    border-color: var(--bgColor);
+    border-right: 1px solid var(--bgColor);
+    border-left: 1px solid var(--bgColor);
+}
+
+.nav-div.nonactive {
+    justify-content: flex-start;
+    align-content: flex-start;
 }
 
 .active-para {

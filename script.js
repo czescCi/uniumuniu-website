@@ -11,14 +11,27 @@ let aboutPara = document.getElementById("about-para");
 let projectsPara = document.getElementById("projects-para");
 let contactPara = document.getElementById("contact-para");
 let contactForm = document.getElementById("contact-form");
+let projectsIcon = document.getElementById("projects-icon");
+let contactIcon = document.getElementById("contact-icon");
 let logo = document.getElementById("logo");
 let submitBtn = document.getElementById("submit-btn");
 let projectsContainer = document.getElementById("project-container");
-let aboutText = document.getElementById("about-text");
+let aboutContent = document.getElementById("about-content");
+
 let logoSmallSize = "100px";
 let logoNormalSize = "300px";
 let bgColorOver = "#f8a23a";
 let bgColor = "#131b26";
+let iconSmall = "70px";
+let iconMarginTop = "15px";
+
+let addBorderBetweenNonActivesDivs = (div1, div2) => {
+    if (div1 === projectsDiv && div2 === contactDiv) {
+        projectsDiv.style.borderRight = "1px solid #f8a23a";
+    } else if (div1 === aboutDiv && div2 === projectsDiv) {
+        aboutDiv.style.borderRight = "1px solid #f8a23a";
+    }
+}
 
 let addMouseEventListeners = function() {
     for (let i = 0; i < navItems.length; i++) {
@@ -50,10 +63,16 @@ let changeColor = (div, para, toActive) => {
 let changeLogo = (div) => {
     if (div.classList.contains("active") && div === aboutDiv) {
         logo.style.width = logo.style.height = logoNormalSize;
-        logo.style.alignSelf = "center";
-    } else {
+        projectsIcon.style.fontSize = contactIcon.style.fontSize = iconSmall;
+        projectsIcon.style.marginTop = contactIcon.style.marginTop = iconMarginTop;
+    } else if (div.classList.contains("active") && div === projectsDiv) {
+        contactIcon.style.fontSize = iconSmall;
+        contactIcon.style.marginTop = iconMarginTop;
         logo.style.width = logo.style.height = logoSmallSize;
-        logo.style.alignSelf = "flex-start";
+    } else if (div.classList.contains("active") && div === contactDiv) {
+        projectsIcon.style.fontSize = iconSmall;
+        projectsIcon.style.marginTop = iconMarginTop;
+        logo.style.width = logo.style.height = logoSmallSize;
     }
 }
 
@@ -71,25 +90,31 @@ let removeActiveClass = (div, para) => {
     para.classList.add("nonactive-para");
 }
 
-let visibilityOfAboutText = (div) => {
+let visibilityOfaboutContent = (div) => {
     if (div.classList.contains("active") && div === aboutDiv) {
-        aboutText.style.display = "flex";
+        aboutContent.style.display = "flex";
+        projectsIcon.style.display = "inline"
+        contactIcon.style.display = "inline"
     } else {
-        aboutText.style.display  = "none";
+        aboutContent.style.display = "none";
     }
 }
 
 let visibilityOfProjectList = (div) => {
     if (div.classList.contains("active") && div === projectsDiv) {
         projectsContainer.style.display = "flex";
+        projectsIcon.style.display = "none";
+        contactIcon.style.display = "inline"
     } else {
-        projectsContainer.style.display  = "none";
+        projectsContainer.style.display = "none";
     }
 }
 
 let visibilityOfContactForm = (div) => {
     if (div.classList.contains("active") && div === contactDiv) {
         contactForm.style.display = "inline";
+        contactIcon.style.display = "none";
+        projectsIcon.style.display = "inline"
     } else {
         contactForm.style.display = "none";
     }
@@ -100,10 +125,11 @@ aboutDiv.onclick = () => {
     addActiveClass(aboutDiv, aboutPara);
     visibilityOfContactForm(aboutDiv);
     visibilityOfProjectList(aboutDiv);
-    visibilityOfAboutText(aboutDiv);
+    visibilityOfaboutContent(aboutDiv);
     changeLogo(aboutDiv)
     changeColor(projectsDiv, projectsPara, false);
     changeColor(contactDiv, contactPara, false);
+    addBorderBetweenNonActivesDivs(projectsDiv, contactDiv);
 }
 
 projectsDiv.onclick = () => {
@@ -111,7 +137,7 @@ projectsDiv.onclick = () => {
     addActiveClass(projectsDiv, projectsPara);
     visibilityOfContactForm(projectsDiv);
     visibilityOfProjectList(projectsDiv);
-    visibilityOfAboutText(projectsDiv);
+    visibilityOfaboutContent(projectsDiv);
     changeLogo(projectsDiv);
     changeColor(aboutDiv, aboutPara, false);
     changeColor(contactDiv, contactPara, false);
@@ -122,10 +148,11 @@ contactDiv.onclick = () => {
     addActiveClass(contactDiv, contactPara);
     visibilityOfContactForm(contactDiv);
     visibilityOfProjectList(contactDiv);
-    visibilityOfAboutText(contactDiv);
+    visibilityOfaboutContent(contactDiv);
     changeLogo(contactDiv);
     changeColor(aboutDiv, aboutPara, false);
     changeColor(projectsDiv, projectsPara, false);
+    addBorderBetweenNonActivesDivs(aboutDiv, projectsDiv);
 }
 
 let resetAllDivs = () => {
