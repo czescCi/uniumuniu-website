@@ -24,6 +24,7 @@ let bgColorOver = "#f8a23a";
 let bgColor = "#131b26";
 let iconSmall = "70px";
 let iconMarginTop = "15px";
+<<<<<<< HEAD
 
 let addBorderBetweenNonActivesDivs = (div1, div2) => {
     if (div1 === projectsDiv && div2 === contactDiv) {
@@ -32,6 +33,8 @@ let addBorderBetweenNonActivesDivs = (div1, div2) => {
         aboutDiv.style.borderRight = "1px solid #f8a23a";
     }
 }
+=======
+>>>>>>> 0dba1183b29d8158eb28f7dacd0dad9986e9948d
 
 let addMouseEventListeners = function() {
     for (let i = 0; i < navItems.length; i++) {
@@ -96,7 +99,11 @@ let visibilityOfaboutContent = (div) => {
         projectsIcon.style.display = "inline"
         contactIcon.style.display = "inline"
     } else {
+<<<<<<< HEAD
         aboutContent.style.display = "none";
+=======
+        aboutContent.style.display  = "none";
+>>>>>>> 0dba1183b29d8158eb28f7dacd0dad9986e9948d
     }
 }
 
