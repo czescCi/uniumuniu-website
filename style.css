@@ -242,7 +242,6 @@ footer {
     flex-grow: 6;
     align-items: stretch;
     background-color: var(--bgColorOver);
-    border: 1px solid var(--bgColor);
 }
 
 .nonactive {
@@ -250,8 +249,6 @@ footer {
     flex-grow: 1;
     visibility: visible;
     background-color: var(--bgColor);
-    border-right: 1px solid var(--bgColor);
-    border-left: 1px solid var(--bgColor);
 }
 
 .nav-div.nonactive {
