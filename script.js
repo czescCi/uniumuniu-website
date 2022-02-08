@@ -31,6 +31,16 @@ window.onload = function() {
     projectsDiv.style.borderLeft = contactDiv.style.borderLeft = yellowBorder;
 }
 
+// aboutDiv.onmouseover = () => {
+//     if (projectsDiv.classList.contains("active")) {
+//         aboutDiv.style.borderRight = navyBorder;
+//     }
+// }
+
+// projectsDiv.onclick = () => {
+//     projectsDiv.style.borderLeft = contactDiv.style.borderLeft = navyBorder;
+
+// }
 
 // let addBorderBetweenNonActivesDivs = (div1, div2) => {
 //     clearAllBorders();
@@ -162,6 +172,8 @@ aboutDiv.onclick = () => {
     changeLogo(aboutDiv)
     changeColor(projectsDiv, projectsPara, false);
     changeColor(contactDiv, contactPara, false);
+    projectsDiv.style.borderLeft = navyBorder;
+    contactDiv.style.borderLeft = yellowBorder;
 }
 
 projectsDiv.onclick = () => {
@@ -173,6 +185,7 @@ projectsDiv.onclick = () => {
     changeLogo(projectsDiv);
     changeColor(aboutDiv, aboutPara, false);
     changeColor(contactDiv, contactPara, false);
+    projectsDiv.style.borderLeft = contactDiv.style.borderLeft = navyBorder;
 }
 
 contactDiv.onclick = () => {
@@ -184,6 +197,8 @@ contactDiv.onclick = () => {
     changeLogo(contactDiv);
     changeColor(aboutDiv, aboutPara, false);
     changeColor(projectsDiv, projectsPara, false);
+    projectsDiv.style.borderLeft = yellowBorder;
+    contactDiv.style.borderLeft = navyBorder;
 }
 
 let resetAllDivs = () => {
