@@ -50,8 +50,6 @@ main {
 .nav-div {
     display: flex;
     flex: 1 0;
-    /* border-style: solid;
-    border-color: #f8a23a; */
     cursor: pointer;
     flex-direction: column;
     align-items: center;
@@ -63,11 +61,6 @@ main {
     justify-content: center;
     align-content: center;
 }
-
-
-/* .nav-div:hover {
-    background-color: #f8a23a;
-} */
 
 .nav-para {
     position: absolute;
@@ -81,14 +74,12 @@ main {
     width: 350px;
 }
 
-#about {
-    /* background-color: darkmagenta; */
-    border-width: 0 1px 0 0;
-}
-
 #about-container {
+    display: flex;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
+    width: 50%;
 }
 
 #about-container p {
@@ -98,10 +89,6 @@ main {
 
 #about-content {
     display: none;
-}
-
-#about-content h2 {
-    text-align: justify;
 }
 
 .fa-github {
@@ -117,12 +104,6 @@ main {
     color: white;
     font-size: 150px;
 }
-
-
-/* #projects {
-    background-color: forestgreen;
-    border-width: 0 1px 0 0;
-} */
 
 #project-container {
     display: none;
@@ -140,13 +121,6 @@ main {
 #wolf-logo {
     height: 100px;
 }
-
-
-/* 
-#contact {
-    background-color: blue;
-    border-width: 0;
-} */
 
 #message {
     resize: none;
