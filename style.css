@@ -108,15 +108,22 @@ main {
     font-size: 30px;
 }
 
-.fa-envelope {
+
+/* .fa-envelope {
+    color: white;
+    font-size: 150px;
+} */
+
+.material-icons-outlined {
     color: white;
     font-size: 150px;
 }
 
-.fa-edit {
+
+/* .fa-edit {
     color: white;
     font-size: 150px;
-}
+} */
 
 
 /* #projects {
