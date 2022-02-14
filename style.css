@@ -103,7 +103,8 @@ main {
 
 .material-icons-outlined {
     color: white;
-    font-size: 150px;
+    height: 150px;
+    width: 150px;
 }
 
 
