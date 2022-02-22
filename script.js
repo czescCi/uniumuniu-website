@@ -17,6 +17,7 @@ let logo = document.getElementById("logo");
 let submitBtn = document.getElementById("submit-btn");
 let projectsContainer = document.getElementById("project-container");
 let aboutContent = document.getElementById("about-content");
+let loader = document.getElementById("preloader");
 
 let logoSmallSize = "100px";
 let logoNormalSize = "300px";
@@ -30,6 +31,11 @@ let navyBorder = "1px solid #131b26";
 window.onload = function() {
     projectsDiv.style.borderLeft = contactDiv.style.borderLeft = yellowBorder;
 }
+
+window.addEventListener("load", function() {
+    loader.style.display = "none";
+})
+
 
 // aboutDiv.onmouseover = () => {
 //     if (projectsDiv.classList.contains("active")) {

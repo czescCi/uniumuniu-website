@@ -260,3 +260,16 @@ footer {
     writing-mode: var(--writingModeNonActive);
     margin-bottom: var(--marginBottom);
 }
+
+#preloader {
+    background: rgb(1, 1, 1) url(res/loader.gif) no-repeat center center;
+    background-size: 30%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+#ncs-music {
+    display: none;
+}
