@@ -33,7 +33,9 @@ window.onload = function() {
 }
 
 window.addEventListener("load", function() {
-    loader.style.display = "none";
+    this.setTimeout(function() {
+        loader.style.display = "none";
+    }, 3000);
 })
 
 
