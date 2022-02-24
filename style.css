@@ -103,8 +103,12 @@ main {
 
 .material-icons-outlined {
     color: white;
-    height: 150px;
-    width: 150px;
+    font-size: 150px;
+}
+
+#projects-icon,
+#contact-icon {
+    display: none;
 }
 
 
@@ -119,14 +123,14 @@ main {
     border-width: 0 1px 0 0;
 } */
 
-#project-container {
+#projects-container {
     display: none;
     align-items: center;
     flex-direction: column;
     width: 50%;
 }
 
-#project-container p {
+#projects-container p {
     text-align: justify;
     color: var(--project-para-color);
     margin-top: 30px;
@@ -240,12 +244,15 @@ footer {
     flex-grow: 1;
     visibility: visible;
     background-color: var(--bgColor);
-}
-
-.nav-div.nonactive {
     justify-content: flex-start;
     align-content: flex-start;
 }
+
+
+/* .nav-div.nonactive {
+    justify-content: flex-start;
+    align-content: flex-start;
+} */
 
 .active-para {
     font-size: var(--normalDivFontSize);
@@ -262,14 +269,10 @@ footer {
 }
 
 #preloader {
-    background: rgb(1, 1, 1) url(res/loader.gif) no-repeat center center;
-    background-size: 30%;
+    background: var(--bgColor) url(res/loader1.gif) no-repeat center center;
+    background-size: 5%;
     height: 100vh;
     width: 100%;
     position: fixed;
     z-index: 100;
-}
-
-#ncs-music {
-    display: none;
 }

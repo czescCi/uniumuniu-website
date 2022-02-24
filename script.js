@@ -15,7 +15,7 @@ let projectsIcon = document.getElementById("projects-icon");
 let contactIcon = document.getElementById("contact-icon");
 let logo = document.getElementById("logo");
 let submitBtn = document.getElementById("submit-btn");
-let projectsContainer = document.getElementById("project-container");
+let projectsContainer = document.getElementById("projects-container");
 let aboutContent = document.getElementById("about-content");
 let loader = document.getElementById("preloader");
 
