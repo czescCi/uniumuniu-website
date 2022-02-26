@@ -1,4 +1,8 @@
-if (screen.width <= 800) {
+// if (screen.width <= 760) {
+//     document.location = "mobilepage.html";
+// }
+
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
     document.location = "mobilepage.html";
 }
 
@@ -30,13 +34,16 @@ let navyBorder = "1px solid #131b26";
 
 window.onload = function() {
     projectsDiv.style.borderLeft = contactDiv.style.borderLeft = yellowBorder;
-}
-
-window.addEventListener("load", function() {
     this.setTimeout(function() {
         loader.style.display = "none";
-    }, 3000);
-})
+    }, 1000);
+}
+
+// window.addEventListener("load", function() {
+//     this.setTimeout(function() {
+//         loader.style.display = "none";
+//     }, 3000);
+// })
 
 
 // aboutDiv.onmouseover = () => {

@@ -85,6 +85,7 @@ main {
 #about-container p {
     text-align: justify;
     margin-top: 30px;
+    color: var(--project-para-color);
 }
 
 #about-content {
