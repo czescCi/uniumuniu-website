@@ -25,14 +25,6 @@ body {
     font-family: 'Roboto Mono', monospace;
 }
 
-
-/* .img-div {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
-
 #logo {
     height: 300px;
     width: 300px;
@@ -96,12 +88,6 @@ main {
     font-size: 30px;
 }
 
-
-/* .fa-envelope {
-    color: white;
-    font-size: 150px;
-} */
-
 .material-icons-outlined {
     color: white;
     font-size: 150px;
@@ -111,18 +97,6 @@ main {
 #contact-icon {
     display: none;
 }
-
-
-/* .fa-edit {
-    color: white;
-    font-size: 150px;
-} */
-
-
-/* #projects {
-    background-color: forestgreen;
-    border-width: 0 1px 0 0;
-} */
 
 #projects-container {
     display: none;
@@ -198,41 +172,6 @@ button[type=submit]:hover {
     text-align: center;
 }
 
-
-/* 
-.footer {
-    background-color: #131b26;
-    width: 100%;
-}
-
-.footer ion-icon {
-    color: white;
-    font-size: 22px;
-    padding: 3px;
-    cursor: pointer;
-    /* &:nth-of-type(1) {
-    margin-right: 10px;
-  } */
-
-
-/* }
-
-#last-logo {
-    margin-right: 10px;
-} */
-
-
-/* 
-footer {
-    display: flex;
-    flex-direction: row-reverse;
-}
-
-#maker {
-    color: #f5deb3;
-    font-size: 10px;
-} */
-
 .active {
     cursor: default;
     flex-grow: 6;
@@ -248,12 +187,6 @@ footer {
     justify-content: flex-start;
     align-content: flex-start;
 }
-
-
-/* .nav-div.nonactive {
-    justify-content: flex-start;
-    align-content: flex-start;
-} */
 
 .active-para {
     font-size: var(--normalDivFontSize);

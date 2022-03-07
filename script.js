@@ -1,8 +1,5 @@
-// if (screen.width <= 760) {
-//     document.location = "mobilepage.html";
-// }
-
-if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+const isMobile = window.matchMedia("only screen and (max-width: 1400px)").matches;
+if (isMobile) {
     document.location = "mobilepage.html";
 }
 
@@ -38,58 +35,6 @@ window.onload = function() {
         loader.style.display = "none";
     }, 1000);
 }
-
-// window.addEventListener("load", function() {
-//     this.setTimeout(function() {
-//         loader.style.display = "none";
-//     }, 3000);
-// })
-
-
-// aboutDiv.onmouseover = () => {
-//     if (projectsDiv.classList.contains("active")) {
-//         aboutDiv.style.borderRight = navyBorder;
-//     }
-// }
-
-// projectsDiv.onclick = () => {
-//     projectsDiv.style.borderLeft = contactDiv.style.borderLeft = navyBorder;
-
-// }
-
-// let addBorderBetweenNonActivesDivs = (div1, div2) => {
-//     clearAllBorders();
-//     if (div1 === projectsDiv && div2 === contactDiv) {
-//         projectsDiv.style.borderRight = "1px solid #f8a23a";
-//     } else if (div1 === aboutDiv && div2 === projectsDiv) {
-//         aboutDiv.style.borderRight = "1px solid #f8a23a";
-//     }
-// }
-
-// aboutDiv.onmouseover = () => {
-//     clearAllBorders();
-//     if (projectsDiv.classList.contains("active")) {
-//         projectsDiv.style.borderLeft = "1px solid #131b26";
-//         projectsDiv.style.borderRight = "1px solid #131b26";
-//     }
-// }
-
-// contactDiv.onmouseover = () => {
-//     clearAllBorders();
-//     if (projectsDiv.classList.contains("active")) {
-//         projectsDiv.style.borderLeft = "1px solid #131b26";
-//         projectsDiv.style.borderRight = "1px solid #131b26";
-//     }
-// }
-
-// let clearAllBorders = () => {
-//     projectsDiv.style.borderLeft = "";
-//     projectsDiv.style.borderRight = "";
-//     aboutDiv.style.borderLeft = "";
-//     aboutDiv.style.borderRight = "";
-//     contactDiv.style.borderLeft = "";
-//     contactDiv.style.borderRight = "";
-// }
 
 let addMouseEventListeners = function() {
     for (let i = 0; i < navItems.length; i++) {
