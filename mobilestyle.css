@@ -4,7 +4,7 @@
     --logoSmallSize: 100px;
     --logoNormalSize: 300px;
     --marginBottom: 30px;
-    --bgColorOver: #f8a23a;
+    --bgColorOver: rgb(248, 162, 58);
     --bgColor: #131b26;
     --project-para-color: #ffffff;
     --writingModeNonActive: vertical-rl;
@@ -15,14 +15,15 @@ section {
     height: 100vh;
 }
 
-@keyframes about-bgd {
+
+/* @keyframes about-bgd {
     from {
         background-color: var(--bgColor);
     }
     to {
         background-color: #012d24;
     }
-}
+} */
 
 #about {
     background-color: var(--bgColor);
@@ -30,10 +31,10 @@ section {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    animation-name: about-bgd;
+    /* animation-name: about-bgd;
     animation-duration: 3s;
     animation-iteration-count: infinite;
-    animation-direction: alternate;
+    animation-direction: alternate; */
 }
 
 #about-para {
@@ -41,7 +42,7 @@ section {
     display: none;
     text-align: justify;
     font-size: 20px;
-    margin: 0 60px;
+    margin: 0 200px;
 }
 
 #logo {
@@ -139,7 +140,8 @@ button[type=submit] {
     text-align: center;
 }
 
-.center {
+
+/* .center {
     text-align: center;
 }
 
@@ -181,5 +183,7 @@ button[type=submit] {
 
 .nav-link-selected {
     background-color: var(--bgColorOver);
-    transform: scale(1.4);
+    transform: scale(1.4); */
+
+
 }

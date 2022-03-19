@@ -44,7 +44,7 @@ html {
     position: absolute;
     width: 8px;
     height: 8px;
-    background: rgba(255, 255, 255, .48);
+    background: rgba(248, 163, 58, 0.473);
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
@@ -63,7 +63,7 @@ html {
     height: 14px;
     margin-top: -4px;
     left: 7px;
-    background-color: #fff;
+    background-color: #f8a23a;
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
     -ms-transform: scale(1);

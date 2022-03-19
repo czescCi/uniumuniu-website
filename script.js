@@ -1,4 +1,4 @@
-const isMobile = window.matchMedia("only screen and (max-width: 1400px)").matches;
+const isMobile = window.matchMedia("only screen and (max-width: 1024px)").matches;
 if (isMobile) {
     document.location = "mobilepage.html";
 }
