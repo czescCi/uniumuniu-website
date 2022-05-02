@@ -1,5 +1,19 @@
 html {
     height: 100%;
+    color: #131b26;
+}
+
+:root {
+    --smallDivFontSize: 30px;
+    --normalDivFontSize: 50px;
+    --logoSmallSize: 100px;
+    --logoNormalSize: 300px;
+    --marginBottom: 30px;
+    --bgColorOver: #f8a23a;
+    --bgColor: #131b26;
+    --project-para-color: #ffffff;
+    --writingModeNonActive: vertical-rl;
+    --writingModeActive: horizontal-tb;
 }
 
 body {
@@ -10,13 +24,6 @@ body {
     background-color: #131b26;
     font-family: 'Roboto Mono', monospace;
 }
-
-/* .img-div {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
 
 #logo {
     height: 300px;
@@ -33,16 +40,19 @@ main {
 }
 
 .nav-div {
+    display: flex;
     flex: 1 0;
-    position: relative;
-    border-style: solid;
-    border-color: #f8a23a;
     cursor: pointer;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-/* .nav-div:hover {
-    background-color: #f8a23a;
-} */
+.section-content {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
 
 .nav-para {
     position: absolute;
@@ -51,41 +61,152 @@ main {
     color: #f8a23a;
 }
 
-#about {
-    /* background-color: darkmagenta; */
-    border-width: 0 1px 0 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#contact-form {
+    display: none;
+    width: 350px;
 }
 
-#projects {
-    /* background-color: forestgreen; */
-    border-width: 0 1px 0 0;
+#about-container {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
 }
 
-#contact {
-    /* background-color: blue; */
-    border-width: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#about-container p {
+    text-align: justify;
+    margin-top: 30px;
+    color: var(--project-para-color);
 }
 
-.nav {
+#about-content {
     display: none;
 }
 
-/* 
-footer {
-    display: flex;
-    flex-direction: row-reverse;
+.fa-github {
+    font-size: 30px;
 }
 
-#maker {
-    color: #f5deb3;
-    font-size: 10px;
-} */
+.material-icons-outlined {
+    color: white;
+    font-size: 150px;
+}
+
+#projects-icon,
+#contact-icon {
+    display: none;
+}
+
+#projects-container {
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+}
+
+#projects-container p {
+    text-align: justify;
+    color: var(--project-para-color);
+    margin-top: 30px;
+}
+
+#wolf-logo {
+    height: 100px;
+}
+
+#message {
+    resize: none;
+}
+
+label {
+    font-size: 0.85em;
+    margin-left: 12px;
+}
+
+input[type=text],
+input[type=email],
+textarea {
+    font-family: 'Roboto Mono', monospace;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    resize: vertical;
+}
+
+input[type=text]:focus,
+input[type=email]:focus,
+textarea:focus {
+    border: 1px solid black;
+}
+
+button[type=submit] {
+    background: #131b26;
+    margin: 0 auto;
+    outline: 0;
+    color: #f8a23a;
+    border: 0;
+    padding: 12px 24px;
+    border-radius: 4px;
+    transition: all ease-in-out 0.1s;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+}
+
+button[type=submit]:focus {
+    background: #131b26;
+    color: #f8a23a;
+}
+
+button[type=submit]:hover {
+    background: #131b26ad;
+}
+
+.center {
+    text-align: center;
+}
+
+.active {
+    cursor: default;
+    flex-grow: 6;
+    align-items: stretch;
+    background-color: var(--bgColorOver);
+}
+
+.nonactive {
+    cursor: pointer;
+    flex-grow: 1;
+    visibility: visible;
+    background-color: var(--bgColor);
+    justify-content: flex-start;
+    align-content: flex-start;
+}
+
+.active-para {
+    font-size: var(--normalDivFontSize);
+    color: var(--bgColor);
+    writing-mode: var(--writingModeActive);
+    margin-bottom: var(--marginBottom);
+}
+
+.nonactive-para {
+    font-size: var(--smallDivFontSize);
+    color: var(--bgColorOver);
+    writing-mode: var(--writingModeNonActive);
+    margin-bottom: var(--marginBottom);
+}
+
+#preloader {
+    background: var(--bgColor) url(res/loader1.gif) no-repeat center center;
+    background-size: 5%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}

@@ -14,51 +14,79 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
     <link rel="icon" href="res/favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="res/favicon.ico" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/bdbf02c54e.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+
+    <div id="preloader"></div>
+
     <header></header>
 
     <main>
         <div id="about" class="nav-div" data-label="About">
-            <!-- <div id="img-div"> -->
-            <img id="logo" src="res/logo.png"></img>
-            <!-- </div> -->
-            <p id="about-para" class="nav-para">about</p>
+            <div class="section-content">
+                <div id="about-container">
+                    <img id="logo" src="res/logo.png"></img>
+                    <p id="about-content">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus semper sem eu volutpat dapibus. Etiam lorem orci, efficitur et tellus sit amet, placerat fringilla orci.
+                    </p>
+                </div>
+                <p id="about-para" class="nav-para">about</p>
+            </div>
         </div>
+
+
         <div id="projects" class="nav-div" data-label="Projects">
-            <p id="projects-para" class="nav-para">projects</p>
+            <div class="section-content">
+                <div id="projects-container">
+                    <img id="wolf-logo" src="res/wolf.png">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus semper sem eu volutpat dapibus. Etiam lorem orci, efficitur et tellus sit amet, placerat fringilla orci. Donec facilisis lectus nisl, eget tincidunt lorem ornare ut. Sed ac lorem nulla.
+                        Sed tincidunt interdum augue, sed gravida nunc aliquam at. Suspendisse dictum cursus neque, vel finibus nunc. Ut sed lectus vitae quam porttitor commodo in vel nibh. Nam faucibus ut erat blandit molestie. Donec egestas sed nunc
+                        ac accumsan.
+                    </p>
+                </div>
+                <span id="projects-icon" class="material-icons-outlined">
+                    content_paste
+                    </span>
+                <p id="projects-para" class="nav-para">projects</p>
+            </div>
         </div>
+
+
         <div id="contact" class="nav-div" data-label="Contact">
-            <p id="contact-para" class="nav-para">contact</p>
+            <div class="section-content">
+                <form id="contact-form" method="POST" action="send" enctype="multipart/form-data">
+                    <div>
+                        <div>
+                            <div>
+                                <input placeholder="Name" id="name" name="name" type="text" required />
+                            </div>
+                            <div>
+                                <input placeholder="Email" id="email" type="email" name="email" aria-describedby="emailHelp" required />
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <textarea placeholder="Message" id="message" name="message" rows="8" required></textarea>
+                    </div>
+                    <div class="center">
+                        <button id="submit-btn" type="submit" value="submit">Submit</button>
+                    </div>
+                </form>
+                <span id="contact-icon" class="material-icons-outlined">
+                    mail
+                    </span>
+                <p id="contact-para" class="nav-para">contact</p>
+            </div>
         </div>
-        <nav class="nav">
-            <div class="nav-item">
-                <a href="#about" class="nav-link">Bottle</a>
-                <span class="nav-label">About</span>
-            </div>
 
-            <div class="nav-item">
-                <a href="#projects" class="nav-link">Bottle</a>
-                <span class="nav-label">Projects</span>
-            </div>
-
-            <div class="nav-item">
-                <a href="#about" class="nav-link">Bottle</a>
-                <span class="nav-label">Contact</span>
-            </div>
-
-        </nav>
     </main>
 
-
-    <!-- <footer>
-            <div class="footer-child">
-                <p id="maker">made by J.</p>
-            </div>
-        </footer> -->
-
     <script src="script.js" async defer></script>
+
 </body>
 
 </html>
