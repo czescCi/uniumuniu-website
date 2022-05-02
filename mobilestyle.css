@@ -42,7 +42,7 @@ section {
     display: none;
     text-align: justify;
     font-size: 20px;
-    margin: 0 200px;
+    margin: 0 100px;
 }
 
 #logo {
@@ -54,11 +54,23 @@ section {
 #projects {
     background-color: var(--bgColor);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.image-grid {
+#projects p {
+    text-align: justify;
+    color: var(--project-para-color);
+    margin: 30px 80px 0px 80px;
+}
+
+#wolf-logo {
+    height: 100px;
+}
+
+
+/* .image-grid {
     --gap: 16px;
     --num-cols: 4;
     --row-height: 200px;
@@ -90,7 +102,7 @@ section {
         --num-cols: 2;
         --row-height: 100px;
     }
-}
+} */
 
 #contact {
     background-color: var(--bgColor);
@@ -140,50 +152,6 @@ button[type=submit] {
     text-align: center;
 }
 
-
-/* .center {
+.center {
     text-align: center;
-}
-
-.nav {
-    --nav-gap: 15px;
-    padding: var(--nav-gap);
-    position: fixed;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.nav-item {
-    align-items: center;
-    display: flex;
-    margin-bottom: var(--nav-gap);
-    flex-direction: row-reverse;
-}
-
-.nav-link:hover~.nav-label {
-    opacity: 1;
-}
-
-.nav-label {
-    color: var(--bgColorOver);
-    font-weight: bold;
-    opacity: 0;
-    transition: opacity 0.1s;
-}
-
-.nav-link {
-    background: rgb(248, 162, 58, 0.2);
-    border-radius: 50%;
-    height: var(--nav-gap);
-    width: var(--nav-gap);
-    margin-left: var(--nav-gap);
-    transition: transform 0.1s;
-}
-
-.nav-link-selected {
-    background-color: var(--bgColorOver);
-    transform: scale(1.4); */
-
-
 }
